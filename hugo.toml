@@ -32,6 +32,8 @@ canonifyURLs = true
 	keywords = ["SaaS", "reviews", "software", "verdicts"]
 	defaultImage = "/images/og-default.png"
 	twitter = "your_twitter_handle"
+	favicon = "/favicon.svg"
+	logo = "/images/logo.svg"
 
 # Language-specific sections. Add or adjust content directories and titles as needed.
 [languages]

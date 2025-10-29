@@ -1,0 +1,8 @@
+<div class="affiliate-cta bg-green pa3 tc white">
+  <h3>Ready to try {{ .Params.title | replaceRE " Review [0-9]+" "" }}?</h3>
+  <p>Get started with our affiliate link and enjoy special offers!</p>
+  <a href="{{ .Params.affiliate }}" class="link white bg-dark-green pa3 br2 f4 dib" target="_blank" rel="nofollow">
+    Get {{ .Params.title | replaceRE " Review [0-9]+" "" }} Now
+  </a>
+  <p class="f6 mt2"><em>Note: This is an affiliate link. By purchasing through this link, you support SaaS Verdict at no extra cost to you.</em></p>
+</div>

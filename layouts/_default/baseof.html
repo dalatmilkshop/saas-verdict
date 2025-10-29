@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{{ .Lang }}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ .Title }}</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="{{ .Site.Params.favicon | default "/favicon.svg" }}" />
+  <link rel="alternate icon" href="{{ .Site.Params.favicon | default "/favicon.svg" }}" />
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="{{ .Params.description | default .Summary | default .Site.Params.description }}" />
+  <meta name="keywords" content="{{ .Params.keywords | default .Site.Params.keywords }}" />
+  <meta name="author" content="{{ .Params.author | default .Site.Params.author }}" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ .Title }}" />
+  <meta property="og:description" content="{{ .Params.description | default .Summary | default .Site.Params.description }}" />
+  <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}" />
+  <meta property="og:url" content="{{ .Permalink }}" />
+  <meta property="og:image" content="{{ .Site.Params.defaultImage | absURL }}" />
+  <meta property="og:site_name" content="{{ .Site.Title }}" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ .Title }}" />
+  <meta name="twitter:description" content="{{ .Params.description | default .Summary | default .Site.Params.description }}" />
+  <meta name="twitter:image" content="{{ .Site.Params.defaultImage | absURL }}" />
+  {{- with .Site.Params.twitter }}
+  <meta name="twitter:site" content="@{{ . }}" />
+  {{- end }}
+
+  {{ partial "site-style.html" . }}
+  {{ partial "head-additions.html" . }}
+</head>
+<body>
+  {{ partial "site-header.html" . }}
+
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  {{ partial "site-footer.html" . }}
+
+  {{ partial "site-scripts.html" . }}
+</body>
+</html>

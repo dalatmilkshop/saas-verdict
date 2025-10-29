@@ -1,0 +1,8 @@
+{{- $text := .Get "text" | default "Get it now" -}}
+{{- $url := .Get "url" -}}
+{{- $class := .Get "class" | default "affiliate-button" -}}
+{{- $target := .Get "target" | default "_blank" -}}
+
+<a href="{{ $url }}" class="{{ $class }}" target="{{ $target }}" rel="nofollow sponsored">
+  {{ $text }}
+</a>

@@ -1,0 +1,83 @@
+{{ define "main" }}
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+    {{- if .Params.description }}
+    <p class="post-description">{{ .Params.description }}</p>
+    {{- end }}
+    <div class="post-meta">
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      {{- with .Params.categories }}
+      <span class="post-categories">
+        {{- range . }}
+        <a href="{{ "/categories/" | relURL }}{{ . | urlize }}/">{{ . }}</a>
+        {{- end }}
+      </span>
+      {{- end }}
+      {{- with .Params.tags }}
+      <span class="post-tags">
+        {{- range . }}
+        <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/">#{{ . }}</a>
+        {{- end }}
+      </span>
+      {{- end }}
+    </div>
+  </header>
+
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+
+  {{- if .Params.affiliate }}
+  <div class="affiliate-section">
+    {{ partial "affiliate-cta.html" . }}
+  </div>
+  {{- end }}
+</article>
+
+<!-- JSON-LD Structured Data for Review -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Review",
+  "name": "{{ .Title }}",
+  "author": {
+    "@type": "Organization",
+    "name": "SaaS Verdict"
+  },
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "description": "{{ .Params.description | default .Summary }}",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "{{ .Params.rating | default 4.0 }}",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "itemReviewed": {
+    "@type": "SoftwareApplication",
+    "name": "{{ .Params.title | replaceRE " Review [0-9]+" "" }}",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web Browser",
+    {{- if .Params.price }}
+    "offers": {
+      "@type": "Offer",
+      "price": "{{ .Params.price | replaceRE "[^0-9.]" "" }}",
+      "priceCurrency": "USD"
+    },
+    {{- end }}
+    {{- if .Params.affiliate }}
+    "url": "{{ .Params.affiliate }}"
+    {{- end }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SaaS Verdict",
+    "url": "{{ .Site.BaseURL }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ .Site.BaseURL }}/images/logo.svg"
+    }
+  }
+}
+</script>
+{{ end }}
