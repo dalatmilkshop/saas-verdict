@@ -3,10 +3,20 @@ languageCode = "en-us"
 title = "SaaS Verdict"
 theme = "ananke"
 
+# Hugo Modules: import Ananke as a module so hosting providers (Cloudflare Pages)
+# can fetch the theme during build. If you prefer to vendor the theme, add it
+# under the `themes/` directory instead.
+[module]
+	[[module.imports]]
+		path = "github.com/theNewDynamic/gohugo-theme-ananke"
+
 # Multilingual settings
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
-paginate = 10
+
+# Pagination (Hugo v0.128+ uses pagination.pagerSize)
+[pagination]
+	pagerSize = 10
 enableRobotsTXT = true
 canonifyURLs = true
 
