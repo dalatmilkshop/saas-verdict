@@ -61,6 +61,6 @@ Based on user feedback, NordVPN receives a **4.8/5** rating from our community. 
 
 NordVPN is an excellent choice for secure internet browsing with its outstanding performance and feature set.
 
-{{< aff-button url="https://nordvpn.com/affiliate-link" text="Get NordVPN Deal →" >}}
+{{< affiliate-button url="https://nordvpn.com/affiliate-link" text="Get NordVPN Deal →" >}}
 
 *Disclaimer: This review is based on extensive testing and user feedback. Affiliate links help support our site at no extra cost to you.*

@@ -443,7 +443,7 @@ function New-ReviewPosts {
         $category = Get-ToolCategory -slug $tool.slug
         $frontMatter = Get-FrontMatter -tool $tool -category $category
         $content = Get-ReviewContent -tool $tool -category $category
-        $content = $content -replace "{{AFFILIATE_BUTTON_PLACEHOLDER}}", "{{</* aff-button url=`"$($tool.affiliate)`" text=`"Get $($tool.name) Deal →`" */>}}"
+        $content = $content -replace "{{AFFILIATE_BUTTON_PLACEHOLDER}}", "{{< affiliate-button url=`"$($tool.affiliate)`" text=`"Get $($tool.name) Deal →`" >}}"
 
         $fileName = "$($tool.slug)-review-2025.md"
         $filePath = Join-Path $OutputDir $fileName

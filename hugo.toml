@@ -1,4 +1,4 @@
-baseURL = "https://<YOUR_SITE>.pages.dev/" # replace with your Cloudflare Pages URL
+baseURL = "https://saasverdict.com/" # replace with your Cloudflare Pages URL
 languageCode = "en-us"
 title = "SaaS Verdict"
 theme = "ananke"

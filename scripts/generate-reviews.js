@@ -380,7 +380,7 @@ category === 'automation' ? 'business process automation' :
 category === 'writing' ? 'content creation and editing' :
 'business software needs'} with its ${tool.rating >= 4.5 ? 'outstanding' : tool.rating >= 4.0 ? 'strong' : 'solid'} performance and feature set.
 
-{{< aff-button url="${tool.affiliate}" text="Get ${tool.name} Deal →" >}}
+{{< affiliate-button url="${tool.affiliate}" text="Get ${tool.name} Deal →" >}}
 
 *Disclaimer: This review is based on extensive testing and user feedback. Affiliate links help support our site at no extra cost to you.*`;
 }
