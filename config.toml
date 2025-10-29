@@ -3,4 +3,4 @@ pagination.pagerSize = 10
 theme = "ananke"
 [module]
   [[module.imports]]
-    path = "github.com/theNewDynamic/gohugo-theme-ananke"
+    path = "github.com/theNewDynamic/gohugo-theme-ananke/v2"

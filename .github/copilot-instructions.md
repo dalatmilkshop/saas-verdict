@@ -29,11 +29,11 @@ This is a multilingual Hugo static site for SaaS product reviews using the Anank
 - Language switching: Automatic based on URL structure (`/fr/`, `/es/`, etc.)
 - Translation files: Located in theme's `i18n/` directory
 
-## Theme Customization
-- **CSS Framework**: Tachyons (via Ananke theme)
-- **No Custom Layouts**: All layouts inherited from vendored Ananke theme
-- **Assets**: Place custom CSS/JS in `assets/` directory
-- **Static Files**: Use `static/` for images, documents, etc.
+## Module Configuration
+- **Theme Module**: Uses vendored Ananke theme via Go modules
+- **Replace Directive**: `go.mod` replaces `github.com/theNewDynamic/gohugo-theme-ananke/v2` with `./themes/ananke`
+- **Module Import**: `config.toml` must reference the exact path with `/v2` suffix to match `go.mod`
+- **Build Systems**: Cloudflare Pages and similar CI systems require proper module configuration
 
 ## Deployment
 - **Platform**: GitHub Pages
@@ -51,5 +51,10 @@ This is a multilingual Hugo static site for SaaS product reviews using the Anank
 - **Front Matter**: Always use TOML format (not YAML)
 - **URLs**: Pretty URLs enabled via `permalinks.posts = "/posts/:slug/"`
 - **Images**: Store in `static/images/` or use page resources
-- **Taxonomies**: Categories and tags auto-generated from content</content>
+- **Taxonomies**: Categories and tags auto-generated from content
+
+## Troubleshooting
+- **Module Not Found**: Ensure `config.toml` module path matches `go.mod` replace directive exactly (including `/v2`)
+- **Deprecated Config**: Remove any `paginate` keys - use `pagination.pagerSize` instead
+- **Build Failures**: Test locally with `hugo --gc --minify` before pushing</content>
 <parameter name="filePath">c:\Users\Admin\Documents\GitHub\saas-verdict\.github\copilot-instructions.md
