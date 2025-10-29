@@ -1,0 +1,436 @@
+[
+  {
+    "name": "NordVPN",
+    "slug": "nordvpn",
+    "affiliate": "https://nordvpn.com/affiliate-link",
+    "rating": 4.8,
+    "price": "$3.99/month"
+  },
+  {
+    "name": "SyncBackPro",
+    "slug": "syncbackpro",
+    "affiliate": "https://2brightsparks.com/affiliate",
+    "rating": 4.9,
+    "price": "$54.95"
+  },
+  {
+    "name": "Slack",
+    "slug": "slack",
+    "affiliate": "https://slack.com/affiliate",
+    "rating": 4.7,
+    "price": "$6.67/user/month"
+  },
+  {
+    "name": "Trello",
+    "slug": "trello",
+    "affiliate": "https://trello.com/affiliate",
+    "rating": 4.5,
+    "price": "$5/user/month"
+  },
+  {
+    "name": "Zoom",
+    "slug": "zoom",
+    "affiliate": "https://zoom.us/affiliate",
+    "rating": 4.6,
+    "price": "$14.99/month"
+  },
+  {
+    "name": "Notion",
+    "slug": "notion",
+    "affiliate": "https://notion.so/affiliate",
+    "rating": 4.8,
+    "price": "$4/user/month"
+  },
+  {
+    "name": "Figma",
+    "slug": "figma",
+    "affiliate": "https://figma.com/affiliate",
+    "rating": 4.7,
+    "price": "$12/editor/month"
+  },
+  {
+    "name": "Canva",
+    "slug": "canva",
+    "affiliate": "https://canva.com/affiliate",
+    "rating": 4.6,
+    "price": "$12.99/month"
+  },
+  {
+    "name": "Mailchimp",
+    "slug": "mailchimp",
+    "affiliate": "https://mailchimp.com/affiliate",
+    "rating": 4.4,
+    "price": "$9.99/month"
+  },
+  {
+    "name": "Shopify",
+    "slug": "shopify",
+    "affiliate": "https://shopify.com/affiliate",
+    "rating": 4.8,
+    "price": "$29/month"
+  },
+  {
+    "name": "HubSpot",
+    "slug": "hubspot",
+    "affiliate": "https://hubspot.com/affiliate",
+    "rating": 4.5,
+    "price": "$50/month"
+  },
+  {
+    "name": "Dropbox",
+    "slug": "dropbox",
+    "affiliate": "https://dropbox.com/affiliate",
+    "rating": 4.4,
+    "price": "$9.99/user/month"
+  },
+  {
+    "name": "Google Drive",
+    "slug": "google-drive",
+    "affiliate": "https://workspace.google.com/affiliate",
+    "rating": 4.6,
+    "price": "$6/user/month"
+  },
+  {
+    "name": "Monday.com",
+    "slug": "monday-com",
+    "affiliate": "https://monday.com/affiliate",
+    "rating": 4.6,
+    "price": "$8/user/month"
+  },
+  {
+    "name": "Asana",
+    "slug": "asana",
+    "affiliate": "https://asana.com/affiliate",
+    "rating": 4.5,
+    "price": "$10.99/user/month"
+  },
+  {
+    "name": "ClickUp",
+    "slug": "clickup",
+    "affiliate": "https://clickup.com/affiliate",
+    "rating": 4.7,
+    "price": "$5/user/month"
+  },
+  {
+    "name": "Microsoft Teams",
+    "slug": "microsoft-teams",
+    "affiliate": "https://microsoft.com/teams/affiliate",
+    "rating": 4.4,
+    "price": "$4/user/month"
+  },
+  {
+    "name": "Discord",
+    "slug": "discord",
+    "affiliate": "https://discord.com/affiliate",
+    "rating": 4.3,
+    "price": "Free"
+  },
+  {
+    "name": "Salesforce",
+    "slug": "salesforce",
+    "affiliate": "https://salesforce.com/affiliate",
+    "rating": 4.2,
+    "price": "$25/user/month"
+  },
+  {
+    "name": "Pipedrive",
+    "slug": "pipedrive",
+    "affiliate": "https://pipedrive.com/affiliate",
+    "rating": 4.5,
+    "price": "$14.90/user/month"
+  },
+  {
+    "name": "Zoho CRM",
+    "slug": "zoho-crm",
+    "affiliate": "https://zoho.com/crm/affiliate",
+    "rating": 4.3,
+    "price": "$12/user/month"
+  },
+  {
+    "name": "Sendinblue",
+    "slug": "sendinblue",
+    "affiliate": "https://sendinblue.com/affiliate",
+    "rating": 4.2,
+    "price": "$25/month"
+  },
+  {
+    "name": "Constant Contact",
+    "slug": "constant-contact",
+    "affiliate": "https://constantcontact.com/affiliate",
+    "rating": 4.1,
+    "price": "$20/month"
+  },
+  {
+    "name": "Google Analytics",
+    "slug": "google-analytics",
+    "affiliate": "https://analytics.google.com/affiliate",
+    "rating": 4.5,
+    "price": "Free"
+  },
+  {
+    "name": "Mixpanel",
+    "slug": "mixpanel",
+    "affiliate": "https://mixpanel.com/affiliate",
+    "rating": 4.4,
+    "price": "$89/month"
+  },
+  {
+    "name": "Hotjar",
+    "slug": "hotjar",
+    "affiliate": "https://hotjar.com/affiliate",
+    "rating": 4.6,
+    "price": "$39/month"
+  },
+  {
+    "name": "Adobe Creative Cloud",
+    "slug": "adobe-creative-cloud",
+    "affiliate": "https://adobe.com/creativecloud/affiliate",
+    "rating": 4.7,
+    "price": "$52.99/month"
+  },
+  {
+    "name": "GitHub",
+    "slug": "github",
+    "affiliate": "https://github.com/affiliate",
+    "rating": 4.8,
+    "price": "$4/user/month"
+  },
+  {
+    "name": "GitLab",
+    "slug": "gitlab",
+    "affiliate": "https://gitlab.com/affiliate",
+    "rating": 4.6,
+    "price": "$4/user/month"
+  },
+  {
+    "name": "Vercel",
+    "slug": "vercel",
+    "affiliate": "https://vercel.com/affiliate",
+    "rating": 4.7,
+    "price": "$0-20/month"
+  },
+  {
+    "name": "Netlify",
+    "slug": "netlify",
+    "affiliate": "https://netlify.com/affiliate",
+    "rating": 4.6,
+    "price": "$0-19/month"
+  },
+  {
+    "name": "QuickBooks",
+    "slug": "quickbooks",
+    "affiliate": "https://quickbooks.intuit.com/affiliate",
+    "rating": 4.4,
+    "price": "$15/month"
+  },
+  {
+    "name": "Xero",
+    "slug": "xero",
+    "affiliate": "https://xero.com/affiliate",
+    "rating": 4.5,
+    "price": "$13/month"
+  },
+  {
+    "name": "FreshBooks",
+    "slug": "freshbooks",
+    "affiliate": "https://freshbooks.com/affiliate",
+    "rating": 4.6,
+    "price": "$19.95/month"
+  },
+  {
+    "name": "BambooHR",
+    "slug": "bamboohr",
+    "affiliate": "https://bamboohr.com/affiliate",
+    "rating": 4.5,
+    "price": "$6/user/month"
+  },
+  {
+    "name": "Workday",
+    "slug": "workday",
+    "affiliate": "https://workday.com/affiliate",
+    "rating": 4.3,
+    "price": "Contact for pricing"
+  },
+  {
+    "name": "Gusto",
+    "slug": "gusto",
+    "affiliate": "https://gusto.com/affiliate",
+    "rating": 4.7,
+    "price": "$6/user/month"
+  },
+  {
+    "name": "LastPass",
+    "slug": "lastpass",
+    "affiliate": "https://lastpass.com/affiliate",
+    "rating": 4.4,
+    "price": "$3/user/month"
+  },
+  {
+    "name": "1Password",
+    "slug": "1password",
+    "affiliate": "https://1password.com/affiliate",
+    "rating": 4.8,
+    "price": "$2.99/user/month"
+  },
+  {
+    "name": "Norton 360",
+    "slug": "norton-360",
+    "affiliate": "https://norton.com/affiliate",
+    "rating": 4.2,
+    "price": "$49.99/year"
+  },
+  {
+    "name": "OneDrive",
+    "slug": "onedrive",
+    "affiliate": "https://onedrive.live.com/affiliate",
+    "rating": 4.5,
+    "price": "$6.99/month"
+  },
+  {
+    "name": "Evernote",
+    "slug": "evernote",
+    "affiliate": "https://evernote.com/affiliate",
+    "rating": 4.3,
+    "price": "$7.99/month"
+  },
+  {
+    "name": "Miro",
+    "slug": "miro",
+    "affiliate": "https://miro.com/affiliate",
+    "rating": 4.7,
+    "price": "$8/user/month"
+  },
+  {
+    "name": "WooCommerce",
+    "slug": "woocommerce",
+    "affiliate": "https://woocommerce.com/affiliate",
+    "rating": 4.5,
+    "price": "$0-199/month"
+  },
+  {
+    "name": "BigCommerce",
+    "slug": "bigcommerce",
+    "affiliate": "https://bigcommerce.com/affiliate",
+    "rating": 4.4,
+    "price": "$29.95/month"
+  },
+  {
+    "name": "Hootsuite",
+    "slug": "hootsuite",
+    "affiliate": "https://hootsuite.com/affiliate",
+    "rating": 4.3,
+    "price": "$99/month"
+  },
+  {
+    "name": "Buffer",
+    "slug": "buffer",
+    "affiliate": "https://buffer.com/affiliate",
+    "rating": 4.4,
+    "price": "$15/month"
+  },
+  {
+    "name": "SEMrush",
+    "slug": "semrush",
+    "affiliate": "https://semrush.com/affiliate",
+    "rating": 4.6,
+    "price": "$119.95/month"
+  },
+  {
+    "name": "Zendesk",
+    "slug": "zendesk",
+    "affiliate": "https://zendesk.com/affiliate",
+    "rating": 4.4,
+    "price": "$49/agent/month"
+  },
+  {
+    "name": "Intercom",
+    "slug": "intercom",
+    "affiliate": "https://intercom.com/affiliate",
+    "rating": 4.5,
+    "price": "$39/user/month"
+  },
+  {
+    "name": "Freshdesk",
+    "slug": "freshdesk",
+    "affiliate": "https://freshdesk.com/affiliate",
+    "rating": 4.3,
+    "price": "$15/agent/month"
+  },
+  {
+    "name": "Zapier",
+    "slug": "zapier",
+    "affiliate": "https://zapier.com/affiliate",
+    "rating": 4.7,
+    "price": "$19.99/month"
+  },
+  {
+    "name": "IFTTT",
+    "slug": "ifttt",
+    "affiliate": "https://ifttt.com/affiliate",
+    "rating": 4.2,
+    "price": "Free"
+  },
+  {
+    "name": "Stripe",
+    "slug": "stripe",
+    "affiliate": "https://stripe.com/affiliate",
+    "rating": 4.8,
+    "price": "2.9% + $0.30/transaction"
+  },
+  {
+    "name": "PayPal",
+    "slug": "paypal",
+    "affiliate": "https://paypal.com/affiliate",
+    "rating": 4.1,
+    "price": "2.9% + $0.30/transaction"
+  },
+  {
+    "name": "Square",
+    "slug": "square",
+    "affiliate": "https://squareup.com/affiliate",
+    "rating": 4.6,
+    "price": "2.6% + $0.10/transaction"
+  },
+  {
+    "name": "Calendly",
+    "slug": "calendly",
+    "affiliate": "https://calendly.com/affiliate",
+    "rating": 4.7,
+    "price": "$8/month"
+  },
+  {
+    "name": "Acuity Scheduling",
+    "slug": "acuity-scheduling",
+    "affiliate": "https://acuityscheduling.com/affiliate",
+    "rating": 4.5,
+    "price": "$15/month"
+  },
+  {
+    "name": "Typeform",
+    "slug": "typeform",
+    "affiliate": "https://typeform.com/affiliate",
+    "rating": 4.6,
+    "price": "$25/month"
+  },
+  {
+    "name": "SurveyMonkey",
+    "slug": "surveymonkey",
+    "affiliate": "https://surveymonkey.com/affiliate",
+    "rating": 4.4,
+    "price": "$25/month"
+  },
+  {
+    "name": "Grammarly",
+    "slug": "grammarly",
+    "affiliate": "https://grammarly.com/affiliate",
+    "rating": 4.5,
+    "price": "$11.99/month"
+  },
+  {
+    "name": "Hemingway",
+    "slug": "hemingway",
+    "affiliate": "https://hemingwayapp.com/affiliate",
+    "rating": 4.2,
+    "price": "$19.99/year"
+  }
+]
