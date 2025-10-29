@@ -9,7 +9,7 @@ theme = "ananke"
 # supports fetching modules.
 # Multilingual settings
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 
 # Pagination (Hugo v0.128+ uses pagination.pagerSize)
 [pagination]
@@ -42,7 +42,7 @@ canonifyURLs = true
 languageName = "English"
 weight = 1
 title = "SaaS Verdict"
-contentDir = "content/en"
+contentDir = "content"
 
 [languages.vi]
 languageName = "Tiếng Việt"

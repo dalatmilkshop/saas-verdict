@@ -21,8 +21,8 @@ NordVPN is a leading VPN service known for its security features and global serv
 
 Starting at $3.99/month with various plans available.
 
-{{< aff-button url="https://nordvpn.com/affiliate-link" text="Get NordVPN Deal →" >}}
+{{< affiliate-button url="https://nordvpn.com/affiliate-link" text="Get NordVPN Deal →" >}}
 
-{{< aff-button url="https://nordvpn.com/special-offer" >}}
+{{< affiliate-button url="https://nordvpn.com/special-offer" >}}
 
-{{< aff-button url="https://nordvpn.com/tracking-test" text="Track This Click" tracking="https://tracking.pixel.com/pixel.gif" >}}
+{{< affiliate-button url="https://nordvpn.com/tracking-test" text="Track This Click" tracking="https://tracking.pixel.com/pixel.gif" >}}
