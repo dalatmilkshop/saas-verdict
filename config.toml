@@ -1,2 +1,3 @@
 # paginate = 10
 pagination.pagerSize = 10
+theme = "ananke"
