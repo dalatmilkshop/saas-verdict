@@ -3,13 +3,10 @@ languageCode = "en-us"
 title = "SaaS Verdict"
 theme = "ananke"
 
-# Hugo Modules: import Ananke as a module so hosting providers (Cloudflare Pages)
-# can fetch the theme during build. If you prefer to vendor the theme, add it
-# under the `themes/` directory instead.
-[module]
-	[[module.imports]]
-		path = "github.com/theNewDynamic/gohugo-theme-ananke"
-
+# Note: The Ananke theme is vendored under `themes/ananke` in this repo.
+# If you prefer to use Hugo Modules to fetch the theme from GitHub, replace
+# this comment with a [module] import block and ensure your build system
+# supports fetching modules.
 # Multilingual settings
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
