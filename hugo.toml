@@ -1,0 +1,94 @@
+baseURL = "https://<YOUR_SITE>.pages.dev/" # replace with your Cloudflare Pages URL
+languageCode = "en-us"
+title = "SaaS Verdict"
+theme = "ananke"
+
+# Multilingual settings
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+paginate = 10
+enableRobotsTXT = true
+canonifyURLs = true
+
+# Sitemap and robots
+[sitemap]
+	changefreq = "monthly"
+	priority = 0.5
+	filename = "sitemap.xml"
+
+[outputs]
+	home = ["HTML", "RSS", "JSON"]
+
+[params]
+	description = "Reviews and verdicts on SaaS products."
+	author = "Your Name"
+	keywords = ["SaaS", "reviews", "software", "verdicts"]
+	defaultImage = "/images/og-default.png"
+	twitter = "your_twitter_handle"
+
+# Language-specific sections. Add or adjust content directories and titles as needed.
+[languages]
+
+[languages.en]
+languageName = "English"
+weight = 1
+title = "SaaS Verdict"
+contentDir = "content/en"
+
+[languages.vi]
+languageName = "Tiếng Việt"
+weight = 2
+title = "SaaS Verdict - Tiếng Việt"
+contentDir = "content/vi"
+
+[languages.fr]
+languageName = "Français"
+weight = 3
+title = "SaaS Verdict - Français"
+contentDir = "content/fr"
+
+[languages.es]
+languageName = "Español"
+weight = 4
+title = "SaaS Verdict - Español"
+contentDir = "content/es"
+
+[languages.de]
+languageName = "Deutsch"
+weight = 5
+title = "SaaS Verdict - Deutsch"
+contentDir = "content/de"
+
+[languages.it]
+languageName = "Italiano"
+weight = 6
+title = "SaaS Verdict - Italiano"
+contentDir = "content/it"
+
+[languages.pt]
+languageName = "Português"
+weight = 7
+title = "SaaS Verdict - Português"
+contentDir = "content/pt"
+
+[languages.ru]
+languageName = "Русский"
+weight = 8
+title = "SaaS Verdict - Русский"
+contentDir = "content/ru"
+
+[languages.ja]
+languageName = "日本語"
+weight = 9
+title = "SaaS Verdict - 日本語"
+contentDir = "content/ja"
+
+[languages.zh]
+languageName = "中文"
+weight = 10
+title = "SaaS Verdict - 中文"
+contentDir = "content/zh"
+
+# Optional: pretty URLs for posts
+[permalinks]
+	posts = "/posts/:slug/"
