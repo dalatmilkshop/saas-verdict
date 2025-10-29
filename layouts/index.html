@@ -1,0 +1,105 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>{{ .Title }}</h1>
+    <p class="hero-description">{{ .Params.description }}</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-number">50+</span>
+        <span class="stat-label">Tools Reviewed</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">4.6★</span>
+        <span class="stat-label">Average Rating</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">10</span>
+        <span class="stat-label">Languages</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Tools Section -->
+<section class="featured-section">
+  <div class="container">
+    <h2 class="section-title">Featured Tools</h2>
+    <p class="section-subtitle">Hand-picked SaaS solutions for security, hosting, and productivity</p>
+
+    <div class="featured-grid">
+      {{ range $index, $tool := (slice
+        (dict "name" "NordVPN" "slug" "nordvpn" "rating" 4.8 "price" "$3.99/month" "category" "VPN")
+        (dict "name" "1Password" "slug" "1password" "rating" 4.8 "price" "$2.99/user/month" "category" "Security")
+        (dict "name" "LastPass" "slug" "lastpass" "rating" 4.4 "price" "$3/user/month" "category" "Security")
+        (dict "name" "Vercel" "slug" "vercel" "rating" 4.7 "price" "$0-20/month" "category" "Hosting")
+        (dict "name" "Netlify" "slug" "netlify" "rating" 4.6 "price" "$0-19/month" "category" "Hosting")
+        (dict "name" "Norton 360" "slug" "norton-360" "rating" 4.2 "price" "$49.99/year" "category" "Security")
+      ) }}
+      <div class="featured-card">
+        <div class="card-header">
+          <div class="logo-placeholder">
+            <span class="logo-text">{{ substr $tool.name 0 1 }}</span>
+          </div>
+          <span class="category-badge">{{ $tool.category }}</span>
+        </div>
+
+        <div class="card-content">
+          <h3 class="tool-name">{{ $tool.name }}</h3>
+
+          <div class="rating-section">
+            <div class="stars">
+              {{ range $star := (seq 1 5) }}
+                {{ if le $star (math.Round $tool.rating) }}
+                  <span class="star filled">★</span>
+                {{ else if and (gt $tool.rating (sub $star 1)) (lt $tool.rating $star) }}
+                  <span class="star half">★</span>
+                {{ else }}
+                  <span class="star">★</span>
+                {{ end }}
+              {{ end }}
+            </div>
+            <span class="rating-text">{{ $tool.rating }}/5</span>
+          </div>
+
+          <div class="price-section">
+            <span class="price">{{ $tool.price }}</span>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <a href="/posts/{{ $tool.slug }}-review-2025/" class="review-btn">
+            Review →
+          </a>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- Categories Section -->
+<section class="categories-section">
+  <div class="container">
+    <h2 class="section-title">Browse by Category</h2>
+    <div class="categories-grid">
+      <a href="/categories/reviews/" class="category-card">
+        <h3>All Reviews</h3>
+        <p>Complete collection of SaaS reviews</p>
+      </a>
+      <a href="/tags/vpn/" class="category-card">
+        <h3>VPN & Security</h3>
+        <p>Privacy and protection tools</p>
+      </a>
+      <a href="/tags/hosting/" class="category-card">
+        <h3>Hosting & Deployment</h3>
+        <p>Web hosting and deployment platforms</p>
+      </a>
+      <a href="/tags/productivity/" class="category-card">
+        <h3>Productivity</h3>
+        <p>Tools to boost your workflow</p>
+      </a>
+    </div>
+  </div>
+</section>
+{{ end }}
