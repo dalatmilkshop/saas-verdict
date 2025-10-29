@@ -36,14 +36,15 @@
   {{ partial "head.html" . }}
 </head>
 <body>
-  {{ partial "site-header.html" . }}
+  {{ partial "site-navigation.html" . }}
 
   <main>
     {{ block "main" . }}{{ end }}
   </main>
 
-  {{ partial "site-footer.html" . }}
+  {{ partial "footer.html" . }}
 
+  {{ partial "navigation-scripts.html" . }}
   {{ partial "site-scripts.html" . }}
 </body>
 </html>

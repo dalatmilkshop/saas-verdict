@@ -7,63 +7,63 @@
       <div class="footer-brand">
         <h3 class="footer-logo">SaaS Verdict</h3>
         <p class="footer-description">
-          Expert reviews and ratings for the best SaaS tools. Find the perfect software solution for your business needs.
+          {{ i18n "footer-description" | default "Expert reviews and ratings for the best SaaS tools. Find the perfect software solution for your business needs." }}
         </p>
         <div class="footer-stats">
           <div class="footer-stat">
             <span class="stat-number">50+</span>
-            <span class="stat-label">Tools Reviewed</span>
+            <span class="stat-label">{{ i18n "tools-reviewed" | default "Tools Reviewed" }}</span>
           </div>
           <div class="footer-stat">
             <span class="stat-number">4.6★</span>
-            <span class="stat-label">Average Rating</span>
+            <span class="stat-label">{{ i18n "average-rating" | default "Average Rating" }}</span>
           </div>
         </div>
       </div>
 
       <!-- Categories Section -->
       <div class="footer-section">
-        <h4 class="footer-heading">Categories</h4>
+        <h4 class="footer-heading">{{ i18n "categories" | default "Categories" }}</h4>
         <ul class="footer-links">
-          <li><a href="/tags/vpn/">VPN & Security</a></li>
-          <li><a href="/tags/hosting/">Web Hosting</a></li>
-          <li><a href="/tags/proxy/">Proxy Services</a></li>
-          <li><a href="/tags/antidetect/">Antidetect Browsers</a></li>
-          <li><a href="/tags/productivity/">Productivity Tools</a></li>
-          <li><a href="/tags/marketing/">Marketing Software</a></li>
-          <li><a href="/tags/developer/">Developer Tools</a></li>
-          <li><a href="/categories/reviews/">All Reviews</a></li>
+          <li><a href="/tags/vpn/">{{ i18n "vpn" | default "VPN & Security" }}</a></li>
+          <li><a href="/tags/hosting/">{{ i18n "web-hosting" | default "Web Hosting" }}</a></li>
+          <li><a href="/tags/proxy/">{{ i18n "proxy" | default "Proxy Services" }}</a></li>
+          <li><a href="/tags/antidetect/">{{ i18n "antidetect" | default "Antidetect Browsers" }}</a></li>
+          <li><a href="/tags/productivity/">{{ i18n "productivity" | default "Productivity Tools" }}</a></li>
+          <li><a href="/tags/marketing/">{{ i18n "marketing" | default "Marketing Software" }}</a></li>
+          <li><a href="/tags/developer/">{{ i18n "developer" | default "Developer Tools" }}</a></li>
+          <li><a href="/categories/reviews/">{{ i18n "all-reviews" | default "All Reviews" }}</a></li>
         </ul>
       </div>
 
       <!-- Popular Tools Section -->
       <div class="footer-section">
-        <h4 class="footer-heading">Popular Tools</h4>
+        <h4 class="footer-heading">{{ i18n "popular-tools" | default "Popular Tools" }}</h4>
         <ul class="footer-links">
-          <li><a href="/posts/nordvpn-review-2025/">NordVPN Review</a></li>
-          <li><a href="/posts/vercel-review-2025/">Vercel Review</a></li>
-          <li><a href="/posts/1password-review-2025/">1Password Review</a></li>
-          <li><a href="/posts/netlify-review-2025/">Netlify Review</a></li>
-          <li><a href="/posts/shopify-review-2025/">Shopify Review</a></li>
-          <li><a href="/posts/slack-review-2025/">Slack Review</a></li>
-          <li><a href="/posts/notion-review-2025/">Notion Review</a></li>
-          <li><a href="/posts/zoom-review-2025/">Zoom Review</a></li>
+          <li><a href="/posts/nordvpn-review-2025/">NordVPN {{ i18n "review" | default "Review" }}</a></li>
+          <li><a href="/posts/vercel-review-2025/">Vercel {{ i18n "review" | default "Review" }}</a></li>
+          <li><a href="/posts/1password-review-2025/">1Password {{ i18n "review" | default "Review" }}</a></li>
+          <li><a href="/posts/netlify-review-2025/">Netlify {{ i18n "review" | default "Review" }}</a></li>
+          <li><a href="/posts/shopify-review-2025/">Shopify {{ i18n "review" | default "Review" }}</a></li>
+          <li><a href="/posts/slack-review-2025/">Slack {{ i18n "review" | default "Review" }}</a></li>
+          <li><a href="/posts/notion-review-2025/">Notion {{ i18n "review" | default "Review" }}</a></li>
+          <li><a href="/posts/zoom-review-2025/">Zoom {{ i18n "review" | default "Review" }}</a></li>
         </ul>
       </div>
 
       <!-- Newsletter & Social Section -->
       <div class="footer-section">
-        <h4 class="footer-heading">Stay Updated</h4>
+        <h4 class="footer-heading">{{ i18n "stay-updated" | default "Stay Updated" }}</h4>
         <p class="newsletter-description">
-          Get the latest SaaS reviews and software recommendations delivered to your inbox.
+          {{ i18n "newsletter-description" | default "Get the latest SaaS reviews and software recommendations delivered to your inbox." }}
         </p>
         <form class="newsletter-form">
-          <input type="email" placeholder="Enter your email" class="newsletter-input" required>
-          <button type="submit" class="newsletter-btn">Subscribe</button>
+          <input type="email" placeholder="{{ i18n "email-placeholder" | default "Enter your email" }}" class="newsletter-input" required>
+          <button type="submit" class="newsletter-btn">{{ i18n "subscribe" | default "Subscribe" }}</button>
         </form>
 
         <div class="social-links">
-          <h5 class="social-heading">Follow Us</h5>
+          <h5 class="social-heading">{{ i18n "follow-us" | default "Follow Us" }}</h5>
           <div class="social-icons">
             <a href="#" class="social-link" aria-label="Twitter">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -94,21 +94,21 @@
     <div class="footer-bottom">
       <div class="footer-bottom-content">
         <div class="legal-links">
-          <a href="/privacy-policy/">Privacy Policy</a>
-          <a href="/terms-of-service/">Terms of Service</a>
-          <a href="/disclaimer/">Disclaimer</a>
-          <a href="/contact/">Contact Us</a>
-          <a href="/sitemap.xml">Sitemap</a>
+          <a href="/privacy-policy/">{{ i18n "privacy-policy" | default "Privacy Policy" }}</a>
+          <a href="/terms-of-service/">{{ i18n "terms-of-service" | default "Terms of Service" }}</a>
+          <a href="/disclaimer/">{{ i18n "disclaimer" | default "Disclaimer" }}</a>
+          <a href="/contact/">{{ i18n "contact" | default "Contact Us" }}</a>
+          <a href="/sitemap.xml">{{ i18n "sitemap" | default "Sitemap" }}</a>
         </div>
 
         <div class="language-selector">
-          <span class="language-label">Language:</span>
+          <span class="language-label">{{ i18n "language" | default "Language:" }}</span>
           {{ partial "language-menu.html" . }}
         </div>
       </div>
 
       <div class="copyright">
-        <p>&copy; 2025 SaaS Verdict. All rights reserved. | Expert SaaS reviews and software recommendations.</p>
+        <p>&copy; 2025 SaaS Verdict. {{ i18n "all-rights-reserved" | default "All rights reserved." }} | {{ i18n "expert-reviews" | default "Expert SaaS reviews and software recommendations." }}</p>
       </div>
     </div>
   </div>

@@ -47,3 +47,180 @@ other = "{{ .Count }} palabras"
 
 [pageTitle]
 other = "{{ .Name }} pagina"
+
+[home]
+other = "Inicio"
+
+[categories]
+other = "Categorías"
+
+[popular-tools]
+other = "Herramientas Populares"
+
+[all-reviews]
+other = "Todas las Reseñas"
+
+[about]
+other = "Acerca de"
+
+[search-placeholder]
+other = "Buscar herramientas..."
+
+[security]
+other = "Seguridad y Privacidad"
+
+[vpn]
+other = "Servicios VPN"
+
+[password-managers]
+other = "Administradores de Contraseñas"
+
+[antivirus]
+other = "Software Antivirus"
+
+[encryption]
+other = "Herramientas de Encriptación"
+
+[hosting]
+other = "Alojamiento y Despliegue"
+
+[web-hosting]
+other = "Alojamiento Web"
+
+[cloud-platforms]
+other = "Plataformas Cloud"
+
+[cdn]
+other = "Servicios CDN"
+
+[serverless]
+other = "Serverless"
+
+[productivity]
+other = "Productividad"
+
+[project-management]
+other = "Gestión de Proyectos"
+
+[communication]
+other = "Comunicación"
+
+[collaboration]
+other = "Colaboración"
+
+[automation]
+other = "Automatización"
+
+[marketing]
+other = "Marketing y Ventas"
+
+[email-marketing]
+other = "Marketing por Email"
+
+[crm]
+other = "Software CRM"
+
+[analytics]
+other = "Analíticas"
+
+[seo]
+other = "Herramientas SEO"
+
+[developer]
+other = "Herramientas de Desarrollador"
+
+[api]
+other = "Gestión de API"
+
+[database]
+other = "Bases de Datos"
+
+[monitoring]
+other = "Monitoreo"
+
+[ci-cd]
+other = "CI/CD"
+
+[specialized]
+other = "Herramientas Especializadas"
+
+[proxy]
+other = "Servicios Proxy"
+
+[antidetect]
+other = "Navegadores Antidetect"
+
+[scraping]
+other = "Web Scraping"
+
+[bot]
+other = "Gestión de Bots"
+
+[footer-description]
+other = "Reseñas de expertos y calificaciones de las mejores herramientas SaaS. Encuentra la solución de software perfecta para las necesidades de tu negocio."
+
+[tools-reviewed]
+other = "Herramientas Revisadas"
+
+[average-rating]
+other = "Calificación Promedio"
+
+[stay-updated]
+other = "Mantente Actualizado"
+
+[newsletter-description]
+other = "Recibe las últimas reseñas de SaaS y recomendaciones de software en tu bandeja de entrada."
+
+[email-placeholder]
+other = "Ingresa tu email"
+
+[subscribe]
+other = "Suscribirse"
+
+[follow-us]
+other = "Síguenos"
+
+[review]
+other = "Reseña"
+
+[privacy-policy]
+other = "Política de Privacidad"
+
+[terms-of-service]
+other = "Términos de Servicio"
+
+[disclaimer]
+other = "Descargo de Responsabilidad"
+
+[contact]
+other = "Contáctanos"
+
+[sitemap]
+other = "Mapa del Sitio"
+
+[language]
+other = "Idioma:"
+
+[all-rights-reserved]
+other = "Todos los derechos reservados."
+
+[expert-reviews]
+other = "Reseñas expertas y recomendaciones de software SaaS."
+
+[featured-subtitle]
+other = "Soluciones SaaS seleccionadas para seguridad, alojamiento y productividad"
+
+[browse-categories]
+other = "Explorar por Categoría"
+
+[all-reviews-desc]
+other = "Colección completa de reseñas SaaS"
+
+[vpn-desc]
+other = "Herramientas de privacidad y protección"
+
+[hosting-desc]
+other = "Plataformas de alojamiento y despliegue web"
+
+[productivity-desc]
+other = "Herramientas para potenciar tu flujo de trabajo"

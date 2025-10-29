@@ -1,0 +1,239 @@
+<!-- Professional Navigation Menu -->
+<nav class="main-navigation" role="navigation">
+  <div class="nav-container">
+    <!-- Logo Section -->
+    <div class="nav-logo">
+      <a href="{{ .Site.Home.RelPermalink }}" class="logo-link">
+        <span class="logo-text">SaaS Verdict</span>
+        <span class="logo-subtitle">Expert Reviews</span>
+      </a>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="nav-menu">
+      <!-- Main Navigation Links -->
+      <ul class="nav-links">
+        <li class="nav-item">
+          <a href="{{ .Site.Home.RelPermalink }}" class="nav-link {{ if .IsHome }}active{{ end }}">
+            {{ i18n "home" | default "Home" }}
+          </a>
+        </li>
+
+        <!-- Categories Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle">
+            {{ i18n "categories" | default "Categories" }}
+            <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </a>
+          <div class="dropdown-menu">
+            <div class="dropdown-content">
+              <div class="dropdown-section">
+                <h4 class="dropdown-title">{{ i18n "security" | default "Security & Privacy" }}</h4>
+                <ul class="dropdown-list">
+                  <li><a href="/tags/vpn/">{{ i18n "vpn" | default "VPN Services" }}</a></li>
+                  <li><a href="/tags/password-manager/">{{ i18n "password-managers" | default "Password Managers" }}</a></li>
+                  <li><a href="/tags/antivirus/">{{ i18n "antivirus" | default "Antivirus Software" }}</a></li>
+                  <li><a href="/tags/encryption/">{{ i18n "encryption" | default "Encryption Tools" }}</a></li>
+                </ul>
+              </div>
+
+              <div class="dropdown-section">
+                <h4 class="dropdown-title">{{ i18n "hosting" | default "Hosting & Deployment" }}</h4>
+                <ul class="dropdown-list">
+                  <li><a href="/tags/hosting/">{{ i18n "web-hosting" | default "Web Hosting" }}</a></li>
+                  <li><a href="/tags/cloud/">{{ i18n "cloud-platforms" | default "Cloud Platforms" }}</a></li>
+                  <li><a href="/tags/cdn/">{{ i18n "cdn" | default "CDN Services" }}</a></li>
+                  <li><a href="/tags/serverless/">{{ i18n "serverless" | default "Serverless" }}</a></li>
+                </ul>
+              </div>
+
+              <div class="dropdown-section">
+                <h4 class="dropdown-title">{{ i18n "productivity" | default "Productivity" }}</h4>
+                <ul class="dropdown-list">
+                  <li><a href="/tags/project-management/">{{ i18n "project-management" | default "Project Management" }}</a></li>
+                  <li><a href="/tags/communication/">{{ i18n "communication" | default "Communication" }}</a></li>
+                  <li><a href="/tags/collaboration/">{{ i18n "collaboration" | default "Collaboration" }}</a></li>
+                  <li><a href="/tags/automation/">{{ i18n "automation" | default "Automation" }}</a></li>
+                </ul>
+              </div>
+
+              <div class="dropdown-section">
+                <h4 class="dropdown-title">{{ i18n "marketing" | default "Marketing & Sales" }}</h4>
+                <ul class="dropdown-list">
+                  <li><a href="/tags/email-marketing/">{{ i18n "email-marketing" | default "Email Marketing" }}</a></li>
+                  <li><a href="/tags/crm/">{{ i18n "crm" | default "CRM Software" }}</a></li>
+                  <li><a href="/tags/analytics/">{{ i18n "analytics" | default "Analytics" }}</a></li>
+                  <li><a href="/tags/seo/">{{ i18n "seo" | default "SEO Tools" }}</a></li>
+                </ul>
+              </div>
+
+              <div class="dropdown-section">
+                <h4 class="dropdown-title">{{ i18n "developer" | default "Developer Tools" }}</h4>
+                <ul class="dropdown-list">
+                  <li><a href="/tags/api/">{{ i18n "api" | default "API Management" }}</a></li>
+                  <li><a href="/tags/database/">{{ i18n "database" | default "Databases" }}</a></li>
+                  <li><a href="/tags/monitoring/">{{ i18n "monitoring" | default "Monitoring" }}</a></li>
+                  <li><a href="/tags/ci-cd/">{{ i18n "ci-cd" | default "CI/CD" }}</a></li>
+                </ul>
+              </div>
+
+              <div class="dropdown-section">
+                <h4 class="dropdown-title">{{ i18n "specialized" | default "Specialized Tools" }}</h4>
+                <ul class="dropdown-list">
+                  <li><a href="/tags/proxy/">{{ i18n "proxy" | default "Proxy Services" }}</a></li>
+                  <li><a href="/tags/antidetect/">{{ i18n "antidetect" | default "Antidetect Browsers" }}</a></li>
+                  <li><a href="/tags/scraping/">{{ i18n "scraping" | default "Web Scraping" }}</a></li>
+                  <li><a href="/tags/bot/">{{ i18n "bot" | default "Bot Management" }}</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Popular Tools Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle">
+            {{ i18n "popular-tools" | default "Popular Tools" }}
+            <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </a>
+          <div class="dropdown-menu">
+            <div class="dropdown-content popular-tools">
+              <a href="/posts/nordvpn-review-2025/" class="tool-item">
+                <div class="tool-logo">N</div>
+                <div class="tool-info">
+                  <div class="tool-name">NordVPN</div>
+                  <div class="tool-category">VPN Service</div>
+                </div>
+                <div class="tool-rating">4.8★</div>
+              </a>
+              <a href="/posts/vercel-review-2025/" class="tool-item">
+                <div class="tool-logo">V</div>
+                <div class="tool-info">
+                  <div class="tool-name">Vercel</div>
+                  <div class="tool-category">Hosting Platform</div>
+                </div>
+                <div class="tool-rating">4.7★</div>
+              </a>
+              <a href="/posts/1password-review-2025/" class="tool-item">
+                <div class="tool-logo">1</div>
+                <div class="tool-info">
+                  <div class="tool-name">1Password</div>
+                  <div class="tool-category">Password Manager</div>
+                </div>
+                <div class="tool-rating">4.8★</div>
+              </a>
+              <a href="/posts/notion-review-2025/" class="tool-item">
+                <div class="tool-logo">N</div>
+                <div class="tool-info">
+                  <div class="tool-name">Notion</div>
+                  <div class="tool-category">Productivity</div>
+                </div>
+                <div class="tool-rating">4.6★</div>
+              </a>
+              <a href="/posts/shopify-review-2025/" class="tool-item">
+                <div class="tool-logo">S</div>
+                <div class="tool-info">
+                  <div class="tool-name">Shopify</div>
+                  <div class="tool-category">E-commerce</div>
+                </div>
+                <div class="tool-rating">4.5★</div>
+              </a>
+              <a href="/posts/slack-review-2025/" class="tool-item">
+                <div class="tool-logo">S</div>
+                <div class="tool-info">
+                  <div class="tool-name">Slack</div>
+                  <div class="tool-category">Communication</div>
+                </div>
+                <div class="tool-rating">4.4★</div>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Reviews Link -->
+        <li class="nav-item">
+          <a href="/categories/reviews/" class="nav-link">
+            {{ i18n "all-reviews" | default "All Reviews" }}
+          </a>
+        </li>
+
+        <!-- About Link -->
+        <li class="nav-item">
+          <a href="/about/" class="nav-link">
+            {{ i18n "about" | default "About" }}
+          </a>
+        </li>
+      </ul>
+
+      <!-- Search Bar -->
+      <div class="nav-search">
+        <form action="/search/" method="get" class="search-form">
+          <input type="text" name="q" placeholder="{{ i18n "search-placeholder" | default "Search tools..." }}" class="search-input">
+          <button type="submit" class="search-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M21 21L16.5 16.5M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="nav-right">
+      <!-- Language Switcher -->
+      {{ partial "language-menu.html" . }}
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-content">
+      <!-- Mobile Search -->
+      <div class="mobile-search">
+        <form action="/search/" method="get" class="search-form">
+          <input type="text" name="q" placeholder="{{ i18n "search-placeholder" | default "Search tools..." }}" class="search-input">
+          <button type="submit" class="search-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M21 21L16.5 16.5M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- Mobile Navigation Links -->
+      <ul class="mobile-nav-links">
+        <li><a href="{{ .Site.Home.RelPermalink }}">{{ i18n "home" | default "Home" }}</a></li>
+        <li class="mobile-dropdown">
+          <a href="#" class="dropdown-toggle">{{ i18n "categories" | default "Categories" }}</a>
+          <ul class="mobile-dropdown-menu">
+            <li><a href="/tags/vpn/">{{ i18n "vpn" | default "VPN Services" }}</a></li>
+            <li><a href="/tags/hosting/">{{ i18n "web-hosting" | default "Web Hosting" }}</a></li>
+            <li><a href="/tags/proxy/">{{ i18n "proxy" | default "Proxy Services" }}</a></li>
+            <li><a href="/tags/antidetect/">{{ i18n "antidetect" | default "Antidetect Browsers" }}</a></li>
+            <li><a href="/tags/productivity/">{{ i18n "productivity" | default "Productivity" }}</a></li>
+            <li><a href="/tags/marketing/">{{ i18n "marketing" | default "Marketing" }}</a></li>
+            <li><a href="/tags/developer/">{{ i18n "developer" | default "Developer Tools" }}</a></li>
+          </ul>
+        </li>
+        <li><a href="/categories/reviews/">{{ i18n "all-reviews" | default "All Reviews" }}</a></li>
+        <li><a href="/about/">{{ i18n "about" | default "About" }}</a></li>
+      </ul>
+
+      <!-- Mobile Language Switcher -->
+      <div class="mobile-language">
+        {{ partial "language-menu.html" . }}
+      </div>
+    </div>
+  </div>
+</nav>

@@ -47,3 +47,180 @@ other = "{{ .Count }} words"
 
 [pageTitle]
 other = "{{ .Name }} page"
+
+[home]
+other = "Home"
+
+[categories]
+other = "Categories"
+
+[popular-tools]
+other = "Popular Tools"
+
+[all-reviews]
+other = "All Reviews"
+
+[about]
+other = "About"
+
+[search-placeholder]
+other = "Search tools..."
+
+[security]
+other = "Security & Privacy"
+
+[vpn]
+other = "VPN Services"
+
+[password-managers]
+other = "Password Managers"
+
+[antivirus]
+other = "Antivirus Software"
+
+[encryption]
+other = "Encryption Tools"
+
+[hosting]
+other = "Hosting & Deployment"
+
+[web-hosting]
+other = "Web Hosting"
+
+[cloud-platforms]
+other = "Cloud Platforms"
+
+[cdn]
+other = "CDN Services"
+
+[serverless]
+other = "Serverless"
+
+[productivity]
+other = "Productivity"
+
+[project-management]
+other = "Project Management"
+
+[communication]
+other = "Communication"
+
+[collaboration]
+other = "Collaboration"
+
+[automation]
+other = "Automation"
+
+[marketing]
+other = "Marketing & Sales"
+
+[email-marketing]
+other = "Email Marketing"
+
+[crm]
+other = "CRM Software"
+
+[analytics]
+other = "Analytics"
+
+[seo]
+other = "SEO Tools"
+
+[developer]
+other = "Developer Tools"
+
+[api]
+other = "API Management"
+
+[database]
+other = "Databases"
+
+[monitoring]
+other = "Monitoring"
+
+[ci-cd]
+other = "CI/CD"
+
+[specialized]
+other = "Specialized Tools"
+
+[proxy]
+other = "Proxy Services"
+
+[antidetect]
+other = "Antidetect Browsers"
+
+[scraping]
+other = "Web Scraping"
+
+[bot]
+other = "Bot Management"
+
+[footer-description]
+other = "Expert reviews and ratings for the best SaaS tools. Find the perfect software solution for your business needs."
+
+[tools-reviewed]
+other = "Tools Reviewed"
+
+[average-rating]
+other = "Average Rating"
+
+[stay-updated]
+other = "Stay Updated"
+
+[newsletter-description]
+other = "Get the latest SaaS reviews and software recommendations delivered to your inbox."
+
+[email-placeholder]
+other = "Enter your email"
+
+[subscribe]
+other = "Subscribe"
+
+[follow-us]
+other = "Follow Us"
+
+[review]
+other = "Review"
+
+[privacy-policy]
+other = "Privacy Policy"
+
+[terms-of-service]
+other = "Terms of Service"
+
+[disclaimer]
+other = "Disclaimer"
+
+[contact]
+other = "Contact Us"
+
+[sitemap]
+other = "Sitemap"
+
+[language]
+other = "Language:"
+
+[all-rights-reserved]
+other = "All rights reserved."
+
+[expert-reviews]
+other = "Expert SaaS reviews and software recommendations."
+
+[featured-subtitle]
+other = "Hand-picked SaaS solutions for security, hosting, and productivity"
+
+[browse-categories]
+other = "Browse by Category"
+
+[all-reviews-desc]
+other = "Complete collection of SaaS reviews"
+
+[vpn-desc]
+other = "Privacy and protection tools"
+
+[hosting-desc]
+other = "Web hosting and deployment platforms"
+
+[productivity-desc]
+other = "Tools to boost your workflow"

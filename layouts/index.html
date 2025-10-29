@@ -25,7 +25,7 @@
 <section class="featured-section">
   <div class="container">
     <h2 class="section-title">Featured Tools</h2>
-    <p class="section-subtitle">Hand-picked SaaS solutions for security, hosting, and productivity</p>
+    <p class="section-subtitle">{{ i18n "featured-subtitle" | default "Hand-picked SaaS solutions for security, hosting, and productivity" }}</p>
 
     <div class="featured-grid">
       {{ range $index, $tool := (slice
@@ -81,27 +81,25 @@
 <!-- Categories Section -->
 <section class="categories-section">
   <div class="container">
-    <h2 class="section-title">Browse by Category</h2>
+    <h2 class="section-title">{{ i18n "browse-categories" | default "Browse by Category" }}</h2>
     <div class="categories-grid">
       <a href="/categories/reviews/" class="category-card">
-        <h3>All Reviews</h3>
-        <p>Complete collection of SaaS reviews</p>
+        <h3>{{ i18n "all-reviews" | default "All Reviews" }}</h3>
+        <p>{{ i18n "all-reviews-desc" | default "Complete collection of SaaS reviews" }}</p>
       </a>
       <a href="/tags/vpn/" class="category-card">
-        <h3>VPN & Security</h3>
-        <p>Privacy and protection tools</p>
+        <h3>{{ i18n "vpn" | default "VPN & Security" }}</h3>
+        <p>{{ i18n "vpn-desc" | default "Privacy and protection tools" }}</p>
       </a>
       <a href="/tags/hosting/" class="category-card">
-        <h3>Hosting & Deployment</h3>
-        <p>Web hosting and deployment platforms</p>
+        <h3>{{ i18n "hosting" | default "Hosting & Deployment" }}</h3>
+        <p>{{ i18n "hosting-desc" | default "Web hosting and deployment platforms" }}</p>
       </a>
       <a href="/tags/productivity/" class="category-card">
-        <h3>Productivity</h3>
-        <p>Tools to boost your workflow</p>
+        <h3>{{ i18n "productivity" | default "Productivity" }}</h3>
+        <p>{{ i18n "productivity-desc" | default "Tools to boost your workflow" }}</p>
       </a>
     </div>
   </div>
 </section>
 {{ end }}
-
-{{ partial "footer.html" . }}
