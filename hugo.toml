@@ -26,6 +26,11 @@ canonifyURLs = true
 [outputs]
 	home = ["HTML", "RSS", "JSON"]
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [params]
 	description = "Reviews and verdicts on SaaS products."
 	author = "Your Name"
