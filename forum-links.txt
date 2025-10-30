@@ -1,0 +1,48 @@
+﻿=== LINKS PHỔ BIẾN CHO DIỄN ĐÀN ===
+Domain: https://saasverdict.com/
+
+---  ---
+Review: 
+Affiliate: 
+
+ ---  ---
+Review: 
+Affiliate: 
+
+ ---  ---
+Review: 
+Affiliate: 
+
+ ---  ---
+Review: 
+Affiliate: 
+
+ ---  ---
+Review: 
+Affiliate: 
+
+ ---  ---
+Review: 
+Affiliate: 
+
+ ---  ---
+Review: 
+Affiliate: 
+
+ ---  ---
+Review: 
+Affiliate: 
+
+ ---  ---
+Review: 
+Affiliate: 
+
+ ---  ---
+Review: 
+Affiliate: 
+
+=== FORMAT CHUNG ===
+- Link review: https://saasverdict.com/posts/{slug}-review-2026-best-software-tools/
+- Link affiliate: https://saasverdict.com/go/{slug}
+
+File CSV đầy đủ: saasverdict-links.csv
