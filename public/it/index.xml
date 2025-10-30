@@ -1,1 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SaaS Verdict - Italiano</title><link>https://saasverdict.com/it/</link><description>Recent content on SaaS Verdict - Italiano</description><generator>Hugo</generator><language>it</language><atom:link href="https://saasverdict.com/it/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SaaS Verdict - Italiano</title>
+    <link>http://localhost:65115/it/</link>
+    <description>Recent content on SaaS Verdict - Italiano</description>
+    <generator>Hugo</generator>
+    <language>it</language>
+    <atom:link href="http://localhost:65115/it/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -12,15 +12,21 @@ if (!(Test-Path $OutputDir)) {
 # Import links data
 $links = Import-Csv -Path $CsvFile
 
+# Function to convert slug to title case
+function ConvertTo-TitleCase {
+    param([string]$Text)
+    return (Get-Culture).TextInfo.ToTitleCase($Text.ToLower())
+}
+
 # Function to generate SEO title
 function Get-SEOTitle {
     param([string]$Slug)
 
     # Convert slug to readable title
-    $title = $Slug -replace '-', ' ' -replace '\b\w', { $_.Value.ToUpper() }
+    $title = ConvertTo-TitleCase -Text ($Slug -replace '-', ' ')
 
     # Add SEO elements
-    $seoTitle = "$title Review 2026 - Best Software Tools & Alternatives"
+    $seoTitle = "$title Review 2026 - Best Software Tools"
 
     # Ensure length is optimal (50-60 characters)
     if ($seoTitle.Length -gt 60) {
@@ -34,7 +40,7 @@ function Get-SEOTitle {
 function Get-MetaDescription {
     param([string]$Slug)
 
-    $toolName = $Slug -replace '-', ' ' -replace '\b\w', { $_.Value.ToUpper() }
+    $toolName = ConvertTo-TitleCase -Text ($Slug -replace '-', ' ')
 
     $descriptions = @(
         "Comprehensive $toolName review 2026. Discover features, pricing, pros/cons & alternatives. Make informed decisions with our detailed analysis.",
@@ -66,7 +72,7 @@ function Get-Keywords {
 function Get-H1Heading {
     param([string]$Slug)
 
-    $toolName = $Slug -replace '-', ' ' -replace '\b\w', { $_.Value.ToUpper() }
+    $toolName = ConvertTo-TitleCase -Text ($Slug -replace '-', ' ')
     return "$toolName Review 2026: Is It Worth Your Investment?"
 }
 
@@ -74,7 +80,7 @@ function Get-H1Heading {
 function Get-Introduction {
     param([string]$Slug, [string]$Category)
 
-    $toolName = $Slug -replace '-', ' ' -replace '\b\w', { $_.Value.ToUpper() }
+    $toolName = ConvertTo-TitleCase -Text ($Slug -replace '-', ' ')
 
     return "$toolName has been making waves in the $Category space, promising innovative solutions for modern businesses and individuals. In this comprehensive review, we'll dive deep into what makes $toolName stand out from the competition.
 
@@ -87,7 +93,7 @@ $toolName is a powerful $Category tool designed to streamline workflows and enha
 function Get-FeaturesSection {
     param([string]$Slug)
 
-    $toolName = $Slug -replace '-', ' ' -replace '\b\w', { $_.Value.ToUpper() }
+    $toolName = ConvertTo-TitleCase -Text ($Slug -replace '-', ' ')
 
     return "## Key Features & Benefits
 
@@ -108,7 +114,7 @@ The platform offers an exceptional user experience with clean design, fast loadi
 function Get-PricingSection {
     param([string]$Slug)
 
-    $toolName = $Slug -replace '-', ' ' -replace '\b\w', { $_.Value.ToUpper() }
+    $toolName = ConvertTo-TitleCase -Text ($Slug -replace '-', ' ')
 
     return "## $toolName Pricing & Plans
 
@@ -159,7 +165,7 @@ function Get-ProsConsSection {
 function Get-WhoShouldUseSection {
     param([string]$Slug)
 
-    $toolName = $Slug -replace '-', ' ' -replace '\b\w', { $_.Value.ToUpper() }
+    $toolName = ConvertTo-TitleCase -Text ($Slug -replace '-', ' ')
 
     return "## Who Should Use $toolName?
 
@@ -178,7 +184,7 @@ $toolName is ideal for:
 function Get-GettingStartedSection {
     param([string]$Slug)
 
-    $toolName = $Slug -replace '-', ' ' -replace '\b\w', { $_.Value.ToUpper() }
+    $toolName = ConvertTo-TitleCase -Text ($Slug -replace '-', ' ')
 
     return "## Getting Started with $toolName
 
@@ -211,7 +217,7 @@ The platform offers extensive resources to help you get started quickly and make
 function Get-AlternativesSection {
     param([string]$Slug)
 
-    $toolName = $Slug -replace '-', ' ' -replace '\b\w', { $_.Value.ToUpper() }
+    $toolName = ConvertTo-TitleCase -Text ($Slug -replace '-', ' ')
 
     return "## $toolName vs Competitors
 
@@ -235,7 +241,7 @@ When compared to similar tools, $toolName stands out with its unique combination
 function Get-FinalVerdict {
     param([string]$Slug)
 
-    $toolName = $Slug -replace '-', ' ' -replace '\b\w', { $_.Value.ToUpper() }
+    $toolName = ConvertTo-TitleCase -Text ($Slug -replace '-', ' ')
 
     return "## Final Verdict
 
@@ -256,7 +262,7 @@ The platform's commitment to continuous improvement and customer satisfaction ma
 function Get-FAQSection {
     param([string]$Slug)
 
-    $toolName = $Slug -replace '-', ' ' -replace '\b\w', { $_.Value.ToUpper() }
+    $toolName = ConvertTo-TitleCase -Text ($Slug -replace '-', ' ')
 
     return "## Frequently Asked Questions
 
@@ -289,7 +295,7 @@ $toolName offers a free trial period ranging from 14 to 30 days depending on the
 function Get-Conclusion {
     param([string]$Slug)
 
-    $toolName = $Slug -replace '-', ' ' -replace '\b\w', { $_.Value.ToUpper() }
+    $toolName = ConvertTo-TitleCase -Text ($Slug -replace '-', ' ')
 
     return "## Conclusion
 
@@ -322,6 +328,7 @@ foreach ($link in $links) {
     $seoTitle = Get-SEOTitle -Slug $slug
     $metaDesc = Get-MetaDescription -Slug $slug
     $keywords = Get-Keywords -Slug $slug
+    $h1 = Get-H1Heading -Slug $slug
 
     $introduction = Get-Introduction -Slug $slug -Category $category
     $features = Get-FeaturesSection -Slug $slug
@@ -350,6 +357,8 @@ image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=400&fi
 
 ![$($slug -replace '-', ' ') interface](https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=400&fit=crop&crop=center)
 
+# $h1
+
 $introduction
 
 $features
@@ -366,7 +375,7 @@ $alternatives
 
 $verdict
 
-{{< aff-button slug="$slug" text="Get $($slug -replace '-', ' ' -replace '\b\w', { $_.Value.ToUpper() }) Deal →" >}}
+{{< aff-button slug="$slug" text="Get $(ConvertTo-TitleCase -Text ($slug -replace '-', ' ')) Deal →" >}}
 
 $faq
 
