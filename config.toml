@@ -4,3 +4,28 @@ theme = "ananke"
 [module]
   [[module.imports]]
     path = "github.com/theNewDynamic/gohugo-theme-ananke/v2"
+[params]
+  twitter = "https://twitter.com/saasverdict"
+  linkedin = "https://linkedin.com/company/saasverdict"
+  youtube = "https://youtube.com/@saasverdict"
+  email = "contact@saasverdict.com"
+
+[[menu.footer]]
+  name = "VPN Services"
+  url = "/categories/vpn-services"
+
+[[menu.footer]]
+  name = "Web Hosting"
+  url = "/categories/web-hosting"
+
+[[menu.footer]]
+  name = "Proxy Services"
+  url = "/categories/proxy-services"
+
+[[menu.footer]]
+  name = "Productivity"
+  url = "/categories/productivity"
+
+[[menu.footer]]
+  name = "Marketing & Sales"
+  url = "/categories/marketing-sales"
