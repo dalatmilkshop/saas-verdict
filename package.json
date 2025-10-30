@@ -2,9 +2,9 @@
   "name": "saas-verdict-generator",
   "version": "1.0.0",
   "description": "Hugo review post generator for SaaS Verdict",
-  "main": "scripts/generate-reviews.js",
+  "main": "scripts/generate-posts.js",
   "scripts": {
-    "generate": "node scripts/generate-reviews.js",
+    "generate": "node scripts/generate-posts.js",
     "build": "hugo --gc --minify"
   },
   "keywords": ["hugo", "generator", "saas", "reviews"],

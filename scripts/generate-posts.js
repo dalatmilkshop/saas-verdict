@@ -1,6 +1,18 @@
 const fs = require('fs');
 const path = require('path');
-const yaml = require('yaml');
+
+// Function to convert object to YAML string
+function objectToYAML(obj) {
+  const lines = [];
+  for (const [key, value] of Object.entries(obj)) {
+    if (typeof value === 'string') {
+      lines.push(`${key}: "${value}"`);
+    } else {
+      lines.push(`${key}: ${value}`);
+    }
+  }
+  return lines.join('\n');
+}
 
 // Function to categorize tools based on keywords
 function categorizeTool(slug, url) {
@@ -185,7 +197,7 @@ function generatePosts() {
     // Read the redirects YAML file
     const redirectsPath = path.join(__dirname, '..', 'data', 'redirects.yaml');
     const redirectsContent = fs.readFileSync(redirectsPath, 'utf8');
-    const redirects = yaml.parse(redirectsContent);
+    const redirects = parseSimpleYAML(redirectsContent);
 
     console.log(`Found ${Object.keys(redirects).length} tools to process`);
 
@@ -220,7 +232,7 @@ function generatePosts() {
 
       // Create the full post content
       const postContent = `---
-${yaml.stringify(frontmatter).trim()}
+${objectToYAML(frontmatter)}
 ---
 
 ${content}`;
