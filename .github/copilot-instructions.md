@@ -11,7 +11,7 @@ This is a multilingual Hugo static site for SaaS product reviews using the Anank
 
 ## Content Structure
 - **Posts**: `content/posts/` (language-agnostic) and `content/{lang}/posts/` (language-specific)
-- **Front Matter**: Use TOML format with `date`, `draft`, `title` fields
+- **Front Matter**: Use TOML format with `date`, `draft`, `title`, `description`, `tags`, `categories`, `rating`, `image` fields
 - **Archetypes**: `archetypes/default.md` provides post templates
 - **Languages**: 10 supported languages (en, vi, fr, es, de, it, pt, ru, ja, zh)
 
@@ -20,7 +20,7 @@ This is a multilingual Hugo static site for SaaS product reviews using the Anank
 - **Theme**: Ananke (vendored locally via `replace` directive in `go.mod`)
 - **Commands**:
   - Local development: `hugo server`
-  - Production build: `hugo --minify`
+  - Production build: `hugo --gc --minify`
   - Clean build: `hugo --gc --minify`
 
 ## Multilingual Setup
@@ -35,11 +35,17 @@ This is a multilingual Hugo static site for SaaS product reviews using the Anank
 - **Module Import**: `config.toml` must reference the exact path with `/v2` suffix to match `go.mod`
 - **Build Systems**: Cloudflare Pages and similar CI systems require proper module configuration
 
-## Deployment
-- **Platform**: GitHub Pages
-- **Trigger**: Push to `master` branch
-- **Build Environment**: Ubuntu with Hugo extended + Dart Sass
-- **Base URL**: Set via `baseURL` in `hugo.toml` (currently placeholder)
+## Content Generation Automation
+- **Data Sources**: `data/saas-tools.json` (tool metadata) and `data/redirects.yaml` (affiliate links)
+- **Scripts**: PowerShell scripts in `scripts/` directory for bulk post generation
+- **Post Structure**: Automated reviews with pros/cons, pricing, ratings based on categories
+- **Categories**: Auto-categorized based on tool keywords (VPN, productivity, marketing, etc.)
+
+## Affiliate Link System
+- **Redirect Management**: Complex system using YAML data and Hugo shortcodes
+- **Shortcodes**: `{{< affiliate-button slug="tool-name" text="Get Deal →" >}}` generates affiliate links
+- **URL Structure**: `/go/tool-slug` redirects to affiliate URLs via `_redirects` file
+- **Data Flow**: YAML data → Hugo shortcodes → generated HTML → Netlify/Cloudflare redirects
 
 ## Development Workflow
 1. Create new posts: `hugo new posts/your-post.md`
@@ -52,6 +58,8 @@ This is a multilingual Hugo static site for SaaS product reviews using the Anank
 - **URLs**: Pretty URLs enabled via `permalinks.posts = "/posts/:slug/"`
 - **Images**: Store in `static/images/` or use page resources
 - **Taxonomies**: Categories and tags auto-generated from content
+- **Post Titles**: Follow pattern "ToolName Review 2025 – Best Category?"
+- **Slugs**: Kebab-case naming (e.g., `tool-name-review-2025`)
 
 ## Troubleshooting
 - **Module Not Found**: Ensure `config.toml` module path matches `go.mod` replace directive exactly (including `/v2`)
