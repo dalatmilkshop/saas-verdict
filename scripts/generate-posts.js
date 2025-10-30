@@ -1,152 +1,253 @@
 const fs = require('fs');
 const path = require('path');
+const yaml = require('yaml');
 
-// Read tools data
-const toolsPath = path.join(__dirname, '..', 'data', 'saas-tools.json');
-const tools = JSON.parse(fs.readFileSync(toolsPath, 'utf8'));
+// Function to categorize tools based on keywords
+function categorizeTool(slug, url) {
+  const lowerSlug = slug.toLowerCase();
+  const lowerUrl = url.toLowerCase();
 
-// Generate pros/cons for each tool category
-function generateProsCons(tool) {
-    const categories = {
-        'nordvpn': {
-            pros: ['Fast VPN speeds', 'Strong encryption', 'No-logs policy', 'Large server network'],
-            cons: ['Occasional connection drops', 'Desktop app can be resource-intensive']
-        },
-        'syncbackpro': {
-            pros: ['Powerful backup automation', 'Supports multiple protocols', 'Reliable scheduling', 'Good customer support'],
-            cons: ['Steep learning curve', 'Windows-only interface']
-        },
-        'slack': {
-            pros: ['Excellent team communication', 'Rich integrations', 'Mobile apps work well', 'Search functionality'],
-            cons: ['Free plan limitations', 'Can become cluttered with many channels']
-        },
-        'trello': {
-            pros: ['Simple and intuitive', 'Great for visual organization', 'Free tier available', 'Mobile apps'],
-            cons: ['Limited automation', 'Basic reporting features']
-        },
-        'zoom': {
-            pros: ['High-quality video calls', 'Easy to use', 'Large meeting capacity', 'Screen sharing works well'],
-            cons: ['Recent security concerns', 'Free tier time limits']
-        },
-        'notion': {
-            pros: ['Extremely flexible', 'All-in-one workspace', 'Beautiful interface', 'Strong community'],
-            cons: ['Learning curve', 'Mobile app limitations']
-        },
-        'figma': {
-            pros: ['Real-time collaboration', 'Web-based design', 'Component system', 'Prototyping tools'],
-            cons: ['Limited bitmap editing', 'Can be slow with large files']
-        },
-        'canva': {
-            pros: ['User-friendly interface', 'Large template library', 'Free tier available', 'Drag-and-drop design'],
-            cons: ['Limited customization', 'Watermarks on free designs']
-        },
-        'mailchimp': {
-            pros: ['Easy email creation', 'Good analytics', 'Automation features', 'Large integrations'],
-            cons: ['Pricing can get expensive', 'Learning curve for advanced features']
-        },
-        'shopify': {
-            pros: ['Easy to set up', 'Great app ecosystem', 'Reliable hosting', 'Good customer support'],
-            cons: ['Transaction fees on basic plans', 'Limited customization without apps']
-        }
-    };
+  // VPN & Security
+  if (lowerSlug.includes('vpn') || lowerSlug.includes('security') || lowerSlug.includes('antivirus') ||
+      lowerSlug.includes('firewall') || lowerSlug.includes('encryption') || lowerSlug.includes('privacy')) {
+    return 'VPN & Security';
+  }
 
-    // Default pros/cons if category not found
-    const defaultPros = ['Reliable performance', 'Good user interface', 'Strong feature set', 'Responsive support'];
-    const defaultCons = ['Learning curve for new users', 'Some advanced features could be improved'];
+  // Productivity & Business
+  if (lowerSlug.includes('crm') || lowerSlug.includes('project') || lowerSlug.includes('task') ||
+      lowerSlug.includes('calendar') || lowerSlug.includes('email') || lowerSlug.includes('business') ||
+      lowerSlug.includes('workflow') || lowerSlug.includes('automation')) {
+    return 'Productivity & Business';
+  }
 
-    return categories[tool.slug] || { pros: defaultPros, cons: defaultCons };
+  // Marketing & SEO
+  if (lowerSlug.includes('seo') || lowerSlug.includes('marketing') || lowerSlug.includes('analytics') ||
+      lowerSlug.includes('social') || lowerSlug.includes('content') || lowerSlug.includes('advertising') ||
+      lowerSlug.includes('email') || lowerSlug.includes('campaign')) {
+    return 'Marketing & SEO';
+  }
+
+  // Development & Design
+  if (lowerSlug.includes('code') || lowerSlug.includes('dev') || lowerSlug.includes('design') ||
+      lowerSlug.includes('editor') || lowerSlug.includes('ide') || lowerSlug.includes('programming') ||
+      lowerSlug.includes('web') || lowerSlug.includes('app')) {
+    return 'Development & Design';
+  }
+
+  // Cloud & Hosting
+  if (lowerSlug.includes('cloud') || lowerSlug.includes('hosting') || lowerSlug.includes('server') ||
+      lowerSlug.includes('storage') || lowerSlug.includes('database') || lowerSlug.includes('aws') ||
+      lowerSlug.includes('azure') || lowerSlug.includes('digitalocean')) {
+    return 'Cloud & Hosting';
+  }
+
+  // E-commerce
+  if (lowerSlug.includes('shop') || lowerSlug.includes('store') || lowerSlug.includes('commerce') ||
+      lowerSlug.includes('payment') || lowerSlug.includes('cart') || lowerSlug.includes('woocommerce')) {
+    return 'E-commerce';
+  }
+
+  // Communication
+  if (lowerSlug.includes('chat') || lowerSlug.includes('messenger') || lowerSlug.includes('video') ||
+      lowerSlug.includes('call') || lowerSlug.includes('meeting') || lowerSlug.includes('slack') ||
+      lowerSlug.includes('teams') || lowerSlug.includes('zoom')) {
+    return 'Communication';
+  }
+
+  // Finance & Accounting
+  if (lowerSlug.includes('finance') || lowerSlug.includes('accounting') || lowerSlug.includes('invoice') ||
+      lowerSlug.includes('billing') || lowerSlug.includes('tax') || lowerSlug.includes('payroll')) {
+    return 'Finance & Accounting';
+  }
+
+  // Education & Learning
+  if (lowerSlug.includes('learn') || lowerSlug.includes('course') || lowerSlug.includes('education') ||
+      lowerSlug.includes('training') || lowerSlug.includes('tutorial') || lowerSlug.includes('skill')) {
+    return 'Education & Learning';
+  }
+
+  // Health & Fitness
+  if (lowerSlug.includes('health') || lowerSlug.includes('fitness') || lowerSlug.includes('medical') ||
+      lowerSlug.includes('wellness') || lowerSlug.includes('diet') || lowerSlug.includes('exercise')) {
+    return 'Health & Fitness';
+  }
+
+  // Gaming & Entertainment
+  if (lowerSlug.includes('game') || lowerSlug.includes('gaming') || lowerSlug.includes('entertainment') ||
+      lowerSlug.includes('music') || lowerSlug.includes('video') || lowerSlug.includes('stream')) {
+    return 'Gaming & Entertainment';
+  }
+
+  // Hardware & Gadgets
+  if (lowerSlug.includes('hardware') || lowerSlug.includes('gadget') || lowerSlug.includes('device') ||
+      lowerSlug.includes('laptop') || lowerSlug.includes('phone') || lowerSlug.includes('tablet')) {
+    return 'Hardware & Gadgets';
+  }
+
+  // Default category
+  return 'Software Tools';
 }
 
-// Generate affiliate CTA based on tool
-function generateAffiliateCTA(tool) {
-    return `Ready to try ${tool.name}? Get started with our affiliate link and enjoy special offers!
-
-[Get ${tool.name} Now](${tool.affiliate})
-
-*Note: This is an affiliate link. By purchasing through this link, you support SaaS Verdict at no extra cost to you.*`;
+// Function to capitalize first letter of each word
+function titleCase(str) {
+  return str.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
 }
 
-// Generate post content
-function generatePostContent(tool) {
-    const { pros, cons } = generateProsCons(tool);
-    const affiliateCTA = generateAffiliateCTA(tool);
+// Function to generate placeholder content
+function generateContent(slug, category) {
+  const titleCaseSlug = titleCase(slug.replace(/-/g, ' '));
 
-    return `![${tool.name} interface](/images/${tool.slug}-1.jpg)
+  return `# ${titleCaseSlug} Review 2026: Is It Worth Your Investment?
 
-${tool.name} is a comprehensive solution that offers powerful features for modern businesses and individuals. With a ${tool.rating}/5 rating from our reviewers, it's clear why this tool has become a popular choice in its category.
+${titleCaseSlug} has been making waves in the ${category.toLowerCase()} space, promising innovative solutions for modern businesses and individuals. In this comprehensive review, we'll dive deep into what makes ${titleCaseSlug} stand out from the competition.
 
-## Key Features
+## What is ${titleCaseSlug}?
 
-${tool.name} provides an extensive range of features designed to meet the needs of both small businesses and large enterprises. The intuitive interface makes it accessible to users of all skill levels.
+${titleCaseSlug} is a powerful ${category.toLowerCase()} tool designed to streamline workflows and enhance productivity. Whether you're a small business owner, freelancer, or enterprise user, ${titleCaseSlug} offers features that can transform how you work.
 
-![${tool.name} dashboard](/images/${tool.slug}-2.jpg)
+## Key Features & Benefits
 
-## Pricing
+### Advanced Functionality
+${titleCaseSlug} comes packed with advanced features that set it apart from basic alternatives. The intuitive interface makes it easy for users of all skill levels to get started quickly.
 
-Starting at ${tool.price}, ${tool.name} offers competitive pricing that provides excellent value for money. Various plans are available to suit different needs and budgets.
+### Seamless Integration
+One of the standout features of ${titleCaseSlug} is its ability to integrate seamlessly with popular tools and platforms. This ensures a smooth workflow without unnecessary complications.
 
-## Pros
+### Security & Reliability
+In today's digital landscape, security is paramount. ${titleCaseSlug} prioritizes data protection with robust security measures and reliable performance.
 
-${pros.map(pro => `- ${pro}`).join('\n')}
+## ${titleCaseSlug} Pricing & Plans
 
-## Cons
+${titleCaseSlug} offers flexible pricing options to suit different needs and budgets. From individual users to large enterprises, there's a plan that fits.
 
-${cons.map(con => `- ${con}`).join('\n')}
+## Pros & Cons
 
-## Our Verdict
+### Pros
+- **User-Friendly Interface**: Easy to navigate and use
+- **Powerful Features**: Comprehensive functionality
+- **Excellent Support**: Responsive customer service
+- **Regular Updates**: Continuous improvement and new features
+- **Strong Security**: Reliable data protection
 
-Overall, ${tool.name} stands out as a ${tool.rating >= 4.5 ? 'excellent' : tool.rating >= 4.0 ? 'solid' : 'decent'} choice in its category. The combination of features, ease of use, and reliability makes it a worthwhile investment for most users.
+### Cons
+- **Learning Curve**: May require time to master advanced features
+- **Pricing**: Higher cost for some users
+- **Limited Free Tier**: Basic features may require paid subscription
 
-![${tool.name} mobile app](/images/${tool.slug}-3.jpg)
+## Who Should Use ${titleCaseSlug}?
 
-${affiliateCTA}
+${titleCaseSlug} is ideal for:
+- Small to medium-sized businesses
+- Freelancers and consultants
+- Teams requiring collaboration tools
+- Organizations focused on productivity
+- Users seeking reliable ${category.toLowerCase()} solutions
 
-*Last updated: October 29, 2025*`;
-}
+## Getting Started with ${titleCaseSlug}
 
-// Generate front matter
-function generateFrontMatter(tool) {
-    const date = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
+Setting up ${titleCaseSlug} is straightforward. The platform offers comprehensive documentation, tutorials, and responsive support to help you get started quickly.
 
-    return `+++
-date = '${date}T10:00:00-07:00'
-draft = false
-title = '${tool.name} Review ${new Date().getFullYear()}'
-description = 'Comprehensive review of ${tool.name} - features, pricing, pros, cons, and our verdict'
-tags = ['${tool.slug}', 'review', 'saas']
-categories = ['Reviews']
-rating = ${tool.rating}
-affiliate = '${tool.affiliate}'
-price = '${tool.price}'
-+++
+## ${titleCaseSlug} vs Competitors
 
-`;
+When compared to similar tools, ${titleCaseSlug} stands out with its unique combination of features, ease of use, and excellent value proposition.
+
+## Final Verdict
+
+${titleCaseSlug} proves to be a reliable and feature-rich solution in the ${category.toLowerCase()} category. While it may have a slight learning curve, the benefits far outweigh the initial investment of time.
+
+{{< aff-button slug="${slug}" text="Get ${titleCaseSlug} Deal →" >}}
+
+## Frequently Asked Questions
+
+**Is ${titleCaseSlug} easy to use?**
+Yes, ${titleCaseSlug} features an intuitive interface that makes it accessible to users of all skill levels.
+
+**What kind of support does ${titleCaseSlug} offer?**
+${titleCaseSlug} provides comprehensive support including documentation, tutorials, and responsive customer service.
+
+**Can ${titleCaseSlug} integrate with other tools?**
+Absolutely! ${titleCaseSlug} offers seamless integration with many popular platforms and tools.
+
+**Is ${titleCaseSlug} secure?**
+Security is a top priority for ${titleCaseSlug}, with robust measures to protect your data.
+
+**What are the pricing options?**
+${titleCaseSlug} offers flexible pricing plans to suit different needs and budgets.
+
+---
+
+*This ${titleCaseSlug} review was last updated in 2026. Prices and features may vary. Always check the official website for the most current information.*`;
 }
 
 // Main function
 function generatePosts() {
-    const postsDir = path.join(__dirname, '..', 'content', 'en', 'posts');
+  try {
+    // Read the redirects YAML file
+    const redirectsPath = path.join(__dirname, '..', 'data', 'redirects.yaml');
+    const redirectsContent = fs.readFileSync(redirectsPath, 'utf8');
+    const redirects = yaml.parse(redirectsContent);
 
-    // Ensure posts directory exists
+    console.log(`Found ${Object.keys(redirects).length} tools to process`);
+
+    // Create posts directory if it doesn't exist
+    const postsDir = path.join(__dirname, '..', 'content', 'en', 'posts');
     if (!fs.existsSync(postsDir)) {
-        fs.mkdirSync(postsDir, { recursive: true });
+      fs.mkdirSync(postsDir, { recursive: true });
     }
 
-    console.log(`Generating ${tools.length} posts...`);
+    let generated = 0;
+    let skipped = 0;
 
-    tools.forEach((tool, index) => {
-        const fileName = `${tool.slug}.md`;
-        const filePath = path.join(postsDir, fileName);
+    // Generate posts for each redirect
+    for (const [slug, url] of Object.entries(redirects)) {
+      const category = categorizeTool(slug, url);
+      const titleCaseSlug = titleCase(slug.replace(/-/g, ' '));
 
-        const frontMatter = generateFrontMatter(tool);
-        const content = generatePostContent(tool);
-        const fullContent = frontMatter + content;
+      // Create frontmatter
+      const frontmatter = {
+        title: `${titleCaseSlug} Review 2026 – Best ${category}?`,
+        date: new Date().toISOString().split('T')[0],
+        draft: false,
+        rating: 4.8,
+        category: category,
+        tags: [category.toLowerCase().replace(' & ', '-').replace(' ', '-'), 'review', '2026'],
+        description: `Comprehensive ${titleCaseSlug} review 2026. Discover if this ${category.toLowerCase()} tool is the best choice for your needs.`,
+        keywords: `${slug}, ${titleCaseSlug}, review, ${category.toLowerCase()}, 2026, best ${category.toLowerCase()}`
+      };
 
-        fs.writeFileSync(filePath, fullContent, 'utf8');
-        console.log(`${index + 1}/${tools.length}: Generated ${fileName}`);
-    });
+      // Generate content
+      const content = generateContent(slug, category);
 
-    console.log('All posts generated successfully!');
+      // Create the full post content
+      const postContent = `---
+${yaml.stringify(frontmatter).trim()}
+---
+
+${content}`;
+
+      // Write the file
+      const filename = `${slug}.md`;
+      const filepath = path.join(postsDir, filename);
+
+      try {
+        fs.writeFileSync(filepath, postContent, 'utf8');
+        console.log(`✓ Generated: ${filename}`);
+        generated++;
+      } catch (error) {
+        console.error(`✗ Failed to write ${filename}:`, error.message);
+        skipped++;
+      }
+    }
+
+    console.log(`\n🎉 Generation complete!`);
+    console.log(`📝 Generated: ${generated} posts`);
+    console.log(`⏭️  Skipped: ${skipped} posts`);
+    console.log(`📁 Posts saved to: ${postsDir}`);
+
+  } catch (error) {
+    console.error('❌ Error:', error.message);
+    process.exit(1);
+  }
 }
 
 // Run the script
