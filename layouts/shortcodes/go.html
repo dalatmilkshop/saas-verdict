@@ -1,0 +1,15 @@
+{{- $slug := .Get 0 -}}
+{{- if $slug -}}
+  {{- $redirects := .Site.Data.redirects -}}
+  {{- $url := index $redirects $slug -}}
+  {{- if $url -}}
+    {{- .Page.AddHeader "Location" $url -}}
+    {{- .Page.AddHeader "Status" "301 Moved Permanently" -}}
+  {{- else -}}
+    {{- .Page.AddHeader "Status" "404 Not Found" -}}
+    404: Affiliate link not found for "{{ $slug }}"
+  {{- end -}}
+{{- else -}}
+  {{- .Page.AddHeader "Status" "400 Bad Request" -}}
+  400: Missing slug parameter
+{{- end -}}
