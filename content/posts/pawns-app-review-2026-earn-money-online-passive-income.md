@@ -156,7 +156,7 @@ Pawns App represents an innovative approach to passive income generation that le
 The platform's commitment to user privacy, combined with its referral bonus system, makes it a solid choice for passive income generation in 2026.
 
 <div style="text-align: center; margin: 30px 0;">
-<a href="https://pawns.app/?r=sig" target="_blank">
+<a href="https://pawns.app/?r=17837781" target="_blank">
 <img src="https://cdn.pawns.app/images/b/728.jpg" alt="Pawns.app - Earn Money Sharing Bandwidth" style="max-width: 100%; height: auto; border: none;">
 </a>
 </div>
