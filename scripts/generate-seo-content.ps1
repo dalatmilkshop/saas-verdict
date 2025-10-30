@@ -50,7 +50,6 @@ function Get-MetaDescription {
 function Get-Keywords {
     param([string]$Slug)
 
-    $baseKeywords = @("$Slug", "review", "2026", "software tools", "best software")
     $toolName = $Slug -replace '-', ' '
 
     $keywords = @(
@@ -136,8 +135,6 @@ $toolName offers a 30-day money-back guarantee, allowing you to try the service 
 # Function to generate pros and cons
 function Get-ProsConsSection {
     param([string]$Slug)
-
-    $toolName = $Slug -replace '-', ' ' -replace '\b\w', { $_.Value.ToUpper() }
 
     return "## Pros & Cons
 
@@ -307,33 +304,6 @@ Whether you're a small business owner, freelancer, or enterprise user, $toolName
 function Get-CategoryFromSlug {
     param([string]$Slug)
 
-    $categories = @{
-        # Add category mappings based on slug patterns
-        "software tools" = "Software Tools"
-        "productivity" = "Productivity & Business"
-        "business" = "Productivity & Business"
-        "marketing" = "Marketing & SEO"
-        "seo" = "Marketing & SEO"
-        "security" = "VPN & Security"
-        "vpn" = "VPN & Security"
-        "cloud" = "Cloud & Hosting"
-        "hosting" = "Cloud & Hosting"
-        "development" = "Development & Design"
-        "design" = "Development & Design"
-        "ecommerce" = "E-commerce"
-        "communication" = "Communication"
-        "finance" = "Finance & Accounting"
-        "accounting" = "Finance & Accounting"
-        "education" = "Education & Learning"
-        "learning" = "Education & Learning"
-        "health" = "Health & Fitness"
-        "fitness" = "Health & Fitness"
-        "gaming" = "Gaming & Entertainment"
-        "entertainment" = "Gaming & Entertainment"
-        "hardware" = "Hardware & Gadgets"
-        "gadgets" = "Hardware & Gadgets"
-    }
-
     # Default category
     return "Software Tools"
 }
@@ -352,7 +322,6 @@ foreach ($link in $links) {
     $seoTitle = Get-SEOTitle -Slug $slug
     $metaDesc = Get-MetaDescription -Slug $slug
     $keywords = Get-Keywords -Slug $slug
-    $h1 = Get-H1Heading -Slug $slug
 
     $introduction = Get-Introduction -Slug $slug -Category $category
     $features = Get-FeaturesSection -Slug $slug
