@@ -21,7 +21,9 @@ Bây giờ, câu hỏi chính là: Nó có đáng không? Để trả lời, b�
 
 Để có cái nhìn chi tiết bên trong, tôi đã tạo một video giải thích chính xác cách kiếm tiền từ EarnApp. Bạn có thể xem nó dưới đây hoặc đọc chi tiết đầy đủ trong bài viết này.
 
-[YouTube Video Placeholder]
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 20px 0;">
+  <iframe src="https://www.youtube.com/embed/N_k9QCtaJww" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
 
 Khuyến nghị: Kiểm tra các ứng dụng thu nhập thụ động hàng đầu
 
@@ -75,7 +77,9 @@ Bạn có thể thiết lập thanh toán tự động khi đạt ngưỡng.
 
 Hệ thống thanh toán đơn giản, với ngưỡng thấp cho PayPal và Wise. Tôi đã ghi video cho thấy quá trình thanh toán và bằng chứng thanh toán:
 
-[YouTube Video Placeholder]
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 20px 0;">
+  <iframe src="https://www.youtube.com/embed/N_k9QCtaJww" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
 
 Để biết thêm trang web với ngưỡng thanh toán thấp, kiểm tra các nền tảng thanh toán nhanh nhất.
 

@@ -2,166 +2,274 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/vi/categories/</loc>
+    <loc>http://localhost:1316/vi/categories/</loc>
+    <lastmod>2025-10-30T09:17:48-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/categories/"
+                href="http://localhost:1316/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/categories/"
+                href="http://localhost:1316/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/categories/"
+                href="http://localhost:1316/es/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="http://localhost:1313/de/categories/"
+                href="http://localhost:1316/de/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="http://localhost:1313/it/categories/"
+                href="http://localhost:1316/it/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="http://localhost:1313/pt/categories/"
+                href="http://localhost:1316/pt/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:1313/ru/categories/"
+                href="http://localhost:1316/ru/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/categories/"
+                href="http://localhost:1316/ja/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/categories/"
+                href="http://localhost:1316/zh/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/vi/categories/"
+                href="http://localhost:1316/vi/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/vi/</loc>
+    <loc>http://localhost:1316/vi/tags/chia-s%E1%BA%BB-b%C4%83ng-th%C3%B4ng/</loc>
+    <lastmod>2025-10-30T09:17:48-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="http://localhost:1313/de/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="http://localhost:1313/it/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="http://localhost:1313/pt/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="http://localhost:1313/ru/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://localhost:1313/ja/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/zh/"
+                href="http://localhost:1316/tags/chia-s%E1%BA%BB-b%C4%83ng-th%C3%B4ng/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/vi/"
+                href="http://localhost:1316/vi/tags/chia-s%E1%BA%BB-b%C4%83ng-th%C3%B4ng/"
                 />
   </url><url>
-    <loc>http://localhost:1313/vi/tags/</loc>
+    <loc>http://localhost:1316/vi/tags/%C4%91%C3%A1nh-gi%C3%A1-earnapp/</loc>
+    <lastmod>2025-10-30T09:17:48-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/fr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="http://localhost:1313/de/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="http://localhost:1313/it/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="http://localhost:1313/pt/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="http://localhost:1313/ru/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://localhost:1313/ja/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/zh/tags/"
+                href="http://localhost:1316/tags/%C4%91%C3%A1nh-gi%C3%A1-earnapp/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/vi/tags/"
+                href="http://localhost:1316/vi/tags/%C4%91%C3%A1nh-gi%C3%A1-earnapp/"
+                />
+  </url><url>
+    <loc>http://localhost:1316/vi/posts/%C4%91%C3%A1nh-gi%C3%A1-earnapp-2025-ki%E1%BA%BFm-ti%E1%BB%81n-online-b%E1%BA%B1ng-c%C3%A1ch-chia-s%E1%BA%BB-b%C4%83ng-th%C3%B4ng-internet-c%C3%B3-h%E1%BB%A3p-ph%C3%A1p-kh%C3%B4ng/</loc>
+    <lastmod>2025-10-30T09:17:48-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1316/posts/earnapp-review-2025-earn-money-online-by-sharing-internet-bandwidth-is-it-legit/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1316/vi/posts/%C4%91%C3%A1nh-gi%C3%A1-earnapp-2025-ki%E1%BA%BFm-ti%E1%BB%81n-online-b%E1%BA%B1ng-c%C3%A1ch-chia-s%E1%BA%BB-b%C4%83ng-th%C3%B4ng-internet-c%C3%B3-h%E1%BB%A3p-ph%C3%A1p-kh%C3%B4ng/"
+                />
+  </url><url>
+    <loc>http://localhost:1316/vi/tags/ki%E1%BA%BFm-ti%E1%BB%81n-online/</loc>
+    <lastmod>2025-10-30T09:17:48-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1316/tags/ki%E1%BA%BFm-ti%E1%BB%81n-online/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1316/vi/tags/ki%E1%BA%BFm-ti%E1%BB%81n-online/"
+                />
+  </url><url>
+    <loc>http://localhost:1316/vi/posts/</loc>
+    <lastmod>2025-10-30T09:17:48-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1316/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1316/vi/posts/"
+                />
+  </url><url>
+    <loc>http://localhost:1316/vi/categories/reviews/</loc>
+    <lastmod>2025-10-30T09:17:48-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1316/categories/reviews/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1316/vi/categories/reviews/"
+                />
+  </url><url>
+    <loc>http://localhost:1316/vi/</loc>
+    <lastmod>2025-10-30T09:17:48-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1316/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://localhost:1316/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1316/es/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="http://localhost:1316/de/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:1316/it/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="http://localhost:1316/pt/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="http://localhost:1316/ru/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="http://localhost:1316/ja/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://localhost:1316/zh/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1316/vi/"
+                />
+  </url><url>
+    <loc>http://localhost:1316/vi/tags/</loc>
+    <lastmod>2025-10-30T09:17:48-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1316/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://localhost:1316/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1316/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="http://localhost:1316/de/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:1316/it/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="http://localhost:1316/pt/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="http://localhost:1316/ru/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="http://localhost:1316/ja/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://localhost:1316/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1316/vi/tags/"
+                />
+  </url><url>
+    <loc>http://localhost:1316/vi/tags/thu-nh%E1%BA%ADp-th%E1%BB%A5-%C4%91%E1%BB%99ng/</loc>
+    <lastmod>2025-10-30T09:17:48-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1316/tags/thu-nh%E1%BA%ADp-th%E1%BB%A5-%C4%91%E1%BB%99ng/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1316/vi/tags/thu-nh%E1%BA%ADp-th%E1%BB%A5-%C4%91%E1%BB%99ng/"
                 />
   </url>
 </urlset>
