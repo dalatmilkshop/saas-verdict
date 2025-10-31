@@ -1,5 +1,17 @@
 {{ define "main" }}
 <article class="max-w-5xl mx-auto px-4 py-8 md:py-12">
+  <!-- Language Switcher (nếu có nhiều ngôn ngữ) -->
+  {{ if .IsTranslated }}
+  <div class="mb-6 text-sm text-right">
+    <span class="text-gray-500">{{ i18n "language" }}:</span>
+    {{ range .Translations }}
+    <a href="{{ .Permalink }}" class="ml-2 text-blue-600 hover:underline">{{ .Language.LanguageName }}</a>
+    {{ end }}
+    <span class="ml-2 text-gray-400">|</span>
+    <span class="text-gray-600">{{ .Language.LanguageName }}</span>
+  </div>
+  {{ end }}
+
   <!-- Header -->
   <header class="mb-10">
     <!-- Categories -->
@@ -27,11 +39,11 @@
 
     <!-- Meta -->
     <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
-      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">
         {{ .Date.Format "2 Jan, 2006" }}
       </time>
       <span>•</span>
-      <span>{{ .ReadingTime }} min read</span>
+      <span>{{ .ReadingTime }} {{ i18n "min_read" }}</span>
 
       {{ with .Params.tags }}
       <span>•</span>
@@ -53,7 +65,7 @@
   </div>
   {{ end }}
 
-  <!-- Rating Stars + Verdict -->
+  <!-- Rating + Verdict -->
   {{ if .Params.rating }}
   <div class="flex items-center gap-3 mb-8 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900 rounded-xl border border-blue-200 dark:border-gray-700">
     <div class="flex items-center">
@@ -67,7 +79,7 @@
     </div>
     <div>
       <span class="text-2xl font-bold text-gray-900 dark:text-white">{{ .Params.rating }}/5</span>
-      <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">— {{ .Params.verdict | default "Good tool" }}</span>
+      <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">— {{ .Params.verdict | default (i18n "good_tool") }}</span>
     </div>
   </div>
   {{ end }}
@@ -75,7 +87,7 @@
   <!-- TOC -->
   {{ if gt (len .TableOfContents) 100 }}
   <details class="mb-8 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer">
-    <summary class="font-semibold text-gray-700 dark:text-gray-300">Mục lục</summary>
+    <summary class="font-semibold text-gray-700 dark:text-gray-300">{{ i18n "table_of_contents" }}</summary>
     <div class="mt-3 text-sm prose dark:prose-invert max-w-none">
       {{ .TableOfContents }}
     </div>
@@ -89,12 +101,12 @@
     <div class="bg-green-50 dark:bg-green-900/20 p-5 rounded-xl border border-green-200 dark:border-green-800">
       <h3 class="font-semibold text-green-800 dark:text-green-400 mb-3 flex items-center">
         <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-        Ưu điểm
+        {{ i18n "pros" }}
       </h3>
       <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
         {{ range .Params.pros }}
         <li class="flex items-start">
-          <span class="text-green-600 dark:text-green-400 mr-2">✓</span>
+          <span class="text-green-600 dark:text-green-400 mr-2">Check</span>
           {{ . }}
         </li>
         {{ end }}
@@ -106,12 +118,12 @@
     <div class="bg-red-50 dark:bg-red-900/20 p-5 rounded-xl border border-red-200 dark:border-red-800">
       <h3 class="font-semibold text-red-800 dark:text-red-400 mb-3 flex items-center">
         <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/></svg>
-        Nhược điểm
+        {{ i18n "cons" }}
       </h3>
       <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
         {{ range .Params.cons }}
         <li class="flex items-start">
-          <span class="text-red-600 dark:text-red-400 mr-2">✗</span>
+          <span class="text-red-600 dark:text-red-400 mr-2">Cross</span>
           {{ . }}
         </li>
         {{ end }}
@@ -136,21 +148,18 @@
   <!-- Final CTA -->
   <div class="text-center py-8 border-t dark:border-gray-700">
     <p class="text-gray-600 dark:text-gray-400 mb-4">
-      Bạn đang tìm tool SaaS phù hợp? <a href="/contact" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">Liên hệ mình</a> để được tư vấn miễn phí!
+      {{ i18n "need_help" }} <a href="/contact" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">{{ i18n "contact_us" }}</a> {{ i18n "for_free_advice" }}
     </p>
   </div>
 </article>
 
-<!-- JSON-LD (giữ nguyên, chỉ tinh chỉnh) -->
+<!-- JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org/",
   "@type": "Review",
   "name": "{{ .Title }}",
-  "author": {
-    "@type": "Organization",
-    "name": "SaaS Verdict"
-  },
+  "author": {"@type": "Organization", "name": "SaaS Verdict"},
   "datePublished": "{{ .Date.Format "2006-01-02" }}",
   "description": "{{ .Params.description | default .Summary | plainify }}",
   "reviewRating": {
@@ -161,25 +170,19 @@
   },
   "itemReviewed": {
     "@type": "SoftwareApplication",
-    "name": "{{ .Params.title | replaceRE " Review [0-9]+" "" | default .Title }}",
+    "name": "{{ .Title | replaceRE " Review [0-9]+" "" }}",
     "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web",
-    {{ if .Params.price }}"offers": {
-      "@type": "Offer",
-      "price": "{{ .Params.price | replaceRE "[^0-9.]" "" }}",
-      "priceCurrency": "USD"
-    },{{ end }}
-    {{ if .Params.affiliate }}"url": "{{ .Params.affiliate }}"{{ end }}
+    "operatingSystem": "Web"
+    {{ if .Params.price }}, "offers": {"@type": "Offer", "price": "{{ .Params.price | replaceRE "[^0-9.]" "" }}", "priceCurrency": "USD"} {{ end }}
+    {{ if .Params.affiliate }}, "url": "{{ .Params.affiliate }}" {{ end }}
   },
   "publisher": {
     "@type": "Organization",
     "name": "SaaS Verdict",
     "url": "{{ .Site.BaseURL | absURL }}",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "{{ .Site.BaseURL | absURL }}images/logo.svg"
-    }
-  }
+    "logo": {"@type": "ImageObject", "url": "{{ .Site.BaseURL | absURL }}images/logo.svg"}
+  },
+  "inLanguage": "{{ .Language.Lang }}"
 }
 </script>
 {{ end }}
