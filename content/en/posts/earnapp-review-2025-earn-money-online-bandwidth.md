@@ -121,12 +121,6 @@ EarnApp offers flexible payment methods with low minimums:
 - **No fees** for most payment methods
 - **Track payments** in your dashboard
 
-Here's a video showing the payment process and proof:
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 20px 0;">
-  <iframe src="https://www.youtube.com/embed/N_k9QCtaJww" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-</div>
-
 ## How Much Can You Earn with EarnApp? <a name="earnings-potential"></a>
 
 **Realistic Earnings Expectations:**
