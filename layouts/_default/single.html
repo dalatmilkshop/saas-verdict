@@ -25,10 +25,8 @@
     </div>
     {{ end }}
 
-    <!-- Title -->
-    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
-      {{ .Title }}
-    </h1>
+    <!-- Title is rendered from the markdown content to avoid duplicate H1 output.
+         Template will not print the H1 so authors' markdown H1 becomes the single page H1. -->
 
     <!-- Description -->
     {{ if .Params.description }}
@@ -58,10 +56,10 @@
     </div>
   </header>
 
-  <!-- Featured Image -->
+  <!-- Featured Image (wrap with post-hero for consistent styling) -->
   {{ if .Params.featured_image }}
-  <div class="mb-10 -mx-4 md:mx-0">
-    <img src="{{ .Params.featured_image | relURL }}" alt="{{ .Title }}" class="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg">
+  <div class="post-hero mb-10 -mx-4 md:mx-0">
+    <img src="{{ .Params.featured_image | relURL }}" alt="{{ .Title }}" class="post-hero-img w-full h-64 md:h-96 object-cover rounded-xl shadow-lg">
   </div>
   {{ end }}
 

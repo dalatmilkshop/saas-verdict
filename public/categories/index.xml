@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on SaaS Verdict</title><link>https://saasverdict.com/categories/</link><description>Recent content in Categories on SaaS Verdict</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 30 Oct 2025 09:17:48 -0700</lastBuildDate><atom:link href="https://saasverdict.com/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>Reviews</title><link>https://saasverdict.com/categories/reviews/</link><pubDate>Thu, 30 Oct 2025 09:17:48 -0700</pubDate><guid>https://saasverdict.com/categories/reviews/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on SaaS Verdict</title>
+    <link>http://localhost:52563/categories/</link>
+    <description>Recent content in Categories on SaaS Verdict</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 Oct 2025 09:17:48 -0700</lastBuildDate>
+    <atom:link href="http://localhost:52563/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reviews</title>
+      <link>http://localhost:52563/categories/reviews/</link>
+      <pubDate>Thu, 30 Oct 2025 09:17:48 -0700</pubDate>
+      <guid>http://localhost:52563/categories/reviews/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

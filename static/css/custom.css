@@ -1,3 +1,47 @@
+/* Custom overrides and utility styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root{
+	--hero-max-width:1200px;
+}
+
+/* Center and constrain featured hero images */
+.post-hero{
+	max-width:var(--hero-max-width);
+	margin:0 auto 1.25rem;
+	overflow:hidden;
+	border-radius:12px;
+}
+
+.post-hero-img{
+	width:100%;
+	height:380px;
+	object-fit:cover;
+	object-position:center center;
+	display:block;
+}
+
+/* Spacing tweaks for header/meta when title is rendered by markdown */
+.post-header{ padding:0 0 0.5rem 0; }
+.post-header .post-meta{ margin-top:0.5rem; }
+
+/* TOC anchor offset for sticky header of ~70px */
+:target::before{
+	content:"";
+	display:block;
+	height:72px;
+	margin-top:-72px;
+	visibility:hidden;
+}
+
+/* TOC link contrast tweaks */
+.post-toc a, .prose a{ color:#7ee787; }
+.post-toc a:hover, .prose a:hover{ color:#a8f5b3; }
+
+/* Mobile adjustments */
+@media (max-width:768px){
+	.post-hero-img{ height:220px; }
+	:target::before{ height:64px; margin-top:-64px; }
+}
