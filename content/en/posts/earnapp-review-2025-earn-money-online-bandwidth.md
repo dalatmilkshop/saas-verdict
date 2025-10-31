@@ -54,7 +54,7 @@ EarnApp uses your device's unused internet bandwidth to create a distributed net
 For a detailed walkthrough, check out this video tutorial:
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 20px 0;">
-  <iframe src="https://www.youtube.com/embed/N_k9QCtaJww" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+  <iframe src="https://www.youtube.com/embed/vHzMGxg8X7M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
 </div>
 
 ## EarnApp Earning Methods <a name="earning-methods"></a>
