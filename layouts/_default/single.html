@@ -136,6 +136,40 @@
     {{ .Content }}
   </div>
 
+  <!-- Related Posts -->
+  {{ $related := .Site.RegularPages.Related . | first 3 }}
+  {{ if $related }}
+  <div class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">{{ i18n "related_posts" | default "Related Posts" }}</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      {{ range $related }}
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+        {{ if .Params.featured_image }}
+        <img src="{{ .Params.featured_image | relURL }}" alt="{{ .Title }}" class="w-full h-48 object-cover">
+        {{ end }}
+        <div class="p-6">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+            <a href="{{ .Permalink }}" class="hover:text-blue-600 dark:hover:text-blue-400">{{ .Title }}</a>
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">{{ .Summary | truncate 100 }}</p>
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-gray-500 dark:text-gray-400">{{ .Date.Format "2 Jan, 2006" }}</span>
+            {{ if .Params.rating }}
+            <div class="flex items-center">
+              <span class="text-sm font-medium text-gray-900 dark:text-white mr-1">{{ .Params.rating }}/5</span>
+              <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
   <!-- Affiliate CTA -->
   {{ if .Params.affiliate }}
   <div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 md:p-8 rounded-2xl shadow-xl text-center mb-12 -mx-4 md:mx-0">
@@ -150,6 +184,17 @@
     </p>
   </div>
 </article>
+
+<!-- Comments Section -->
+<div class="max-w-5xl mx-auto px-4 py-8">
+  <script src="https://utteranc.es/client.js"
+          repo="dalatmilkshop/saas-verdict"
+          issue-term="pathname"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
 
 <!-- JSON-LD -->
 <script type="application/ld+json">
@@ -183,4 +228,26 @@
   "inLanguage": "{{ .Language.Lang }}"
 }
 </script>
+{{ if .Params.video_url }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "VideoObject",
+  "name": "{{ .Params.video_title | default (printf "Video Review %s" .Title) }}",
+  "description": "{{ .Params.description | default .Summary | plainify }}",
+  "thumbnailUrl": "{{ .Params.video_thumbnail | default (printf "https://img.youtube.com/vi/%s/maxresdefault.jpg" (strings.TrimPrefix "https://www.youtube.com/watch?v=" .Params.video_url)) }}",
+  "uploadDate": "{{ .Date.Format "2006-01-02" }}",
+  "duration": "{{ .Params.video_duration | default "PT10M" }}",
+  "contentUrl": "{{ .Params.video_url }}",
+  "embedUrl": "{{ .Params.video_url | replaceRE "watch\\?v=" "embed/" }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "SaaS Verdict",
+    "url": "{{ .Site.BaseURL | absURL }}",
+    "logo": {"@type": "ImageObject", "url": "{{ .Site.BaseURL | absURL }}images/logo.svg"}
+  },
+  "inLanguage": "{{ .Language.Lang }}"
+}
+</script>
+{{ end }}
 {{ end }}

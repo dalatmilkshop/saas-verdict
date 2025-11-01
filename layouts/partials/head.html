@@ -1249,3 +1249,16 @@ img {
 </style>
 <!-- Custom overrides (site-wide). Created in static/css/custom.css -->
 <link rel="stylesheet" href="{{ "/css/custom.css" | relURL }}">
+
+{{ if .Params.video_url }}
+<!-- Video Meta Tags -->
+<meta property="og:video" content="{{ .Params.video_url }}">
+<meta property="og:video:secure_url" content="{{ .Params.video_url }}">
+<meta property="og:video:type" content="video/mp4">
+<meta property="og:video:width" content="1280">
+<meta property="og:video:height" content="720">
+<meta name="twitter:card" content="player">
+<meta name="twitter:player" content="{{ .Params.video_url | replaceRE "watch\\?v=" "embed/" }}">
+<meta name="twitter:player:width" content="1280">
+<meta name="twitter:player:height" content="720">
+{{ end }}
