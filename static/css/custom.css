@@ -45,3 +45,26 @@
 	.post-hero-img{ height:220px; }
 	:target::before{ height:64px; margin-top:-64px; }
 }
+
+/* Mobile Navigation Fixes */
+.mobile-menu {
+  display: none !important;
+}
+
+.mobile-menu.active {
+  display: block !important;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: flex !important;
+  }
+  
+  .nav-menu {
+    display: none !important;
+  }
+  
+  .nav-search {
+    display: none !important;
+  }
+}

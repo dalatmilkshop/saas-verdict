@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on SaaS Verdict - Tiếng Việt</title><link>https://saasverdict.com/vi/categories/</link><description>Recent content in Categories on SaaS Verdict - Tiếng Việt</description><generator>Hugo</generator><language>vi</language><lastBuildDate>Fri, 31 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://saasverdict.com/vi/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>App Kiếm Tiền</title><link>https://saasverdict.com/vi/categories/app-ki%E1%BA%BFm-ti%E1%BB%81n/</link><pubDate>Fri, 31 Oct 2025 00:00:00 +0000</pubDate><guid>https://saasverdict.com/vi/categories/app-ki%E1%BA%BFm-ti%E1%BB%81n/</guid><description/></item><item><title>Passive Income</title><link>https://saasverdict.com/vi/categories/passive-income/</link><pubDate>Fri, 31 Oct 2025 00:00:00 +0000</pubDate><guid>https://saasverdict.com/vi/categories/passive-income/</guid><description/></item><item><title>Reviews</title><link>https://saasverdict.com/vi/categories/reviews/</link><pubDate>Thu, 30 Oct 2025 09:17:48 -0700</pubDate><guid>https://saasverdict.com/vi/categories/reviews/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on SaaS Verdict - Tiếng Việt</title>
+    <link>http://localhost:1313/vi/categories/</link>
+    <description>Recent content in Categories on SaaS Verdict - Tiếng Việt</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Fri, 31 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/vi/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>App Kiếm Tiền</title>
+      <link>http://localhost:1313/vi/categories/app-ki%E1%BA%BFm-ti%E1%BB%81n/</link>
+      <pubDate>Fri, 31 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/vi/categories/app-ki%E1%BA%BFm-ti%E1%BB%81n/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Passive Income</title>
+      <link>http://localhost:1313/vi/categories/passive-income/</link>
+      <pubDate>Fri, 31 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/vi/categories/passive-income/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reviews</title>
+      <link>http://localhost:1313/vi/categories/reviews/</link>
+      <pubDate>Thu, 30 Oct 2025 09:17:48 -0700</pubDate>
+      <guid>http://localhost:1313/vi/categories/reviews/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
